@@ -1,14 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>howa_design</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- jQueryCDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
+    <header id="header">
+        <div class="header_wrap">
+            <h1 class="header_logo">
+                <img src="./images/header_logo.svg" alt="howa_design_logo">
+            </h1>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#ABOUT">ABOUT</a></li>
+                    <li><a href="#SERVICE">SERVICE</a></li>
+                    <li><a href="#WORKS">WORKS</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn">
+                <p>CLOSE</p>
+                <span></span>
+            </div>
+            <div class="sp_nav">
+                <div class="sp_nav_menu">
+                    <ul>
+                        <li><a href="#ABOUT">ABOUT</a></li>
+                        <li><a href="#SERVICE">SERVICE</a></li>
+                        <li><a href="#WORKS">WORKS</a></li>
+                        <li><a href="#CONTACT">CONTACT</a></li>
+                    </ul>
+                    <p>ふわっとしたイメージ<br>
+                        ほわっと形に。</p>
+                    <a class="contact_btn" href="#CONTACT">お問い合わせフォーム</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <div class="intro">
+            <div class="intro_ja">
+                <p>ふわっとしたイメージ<br>ほわっと形に。</p>
+            </div>
+            <div class="intro_en">
+                <p>Web&Graphic Design&Branding</p>
+            </div>
+        </div>
+
+        <section id="ABOUT">
+            <div class="lamp_animation">
+                <div class="lamp"></div>
+            </div>
+            <div class="ABOUT_box">
+                <h2>ABOUT</h2>
+                <p>ふわっとしたものでも<br>
+                    ほわっと優しく光を当てると<br>
+                    輪郭がはっきり見えてくる。<br>
+                    <br>話す前から形が決まってなくても大丈夫。<br>
+                    ふわっとお気軽にご相談ください。
+                </p>
+                <a class="btn" href="#ABOUT">MORE ABOUT</a>
+            </div>
+
+
+        </section>
+
+    </main>
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        });
+    </script>
 </body>
 
 </html>
