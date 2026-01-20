@@ -5,13 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>howa_design</title>
+
+    <!-- slick CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+
     <!-- jQueryCDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- slick js CDN -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- フォント -->
+    <link rel="stylesheet" href="https://use.typekit.net/kdj8amb.css">
+
+
+    <!-- jsDelivr cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
 </head>
 
 <body>
+    <!-- 背景 -->
+    <div class="bg">
+        <video src="./images/bg 11.40.28.mp4" class="bg_video" autoplay loop muted playsinline
+            poster="./images/bg.jpg"></video>
+    </div>
+
     <header id="header">
         <div class="header_wrap">
             <h1 class="header_logo">
@@ -67,10 +90,90 @@
                     <br>話す前から形が決まってなくても大丈夫。<br>
                     ふわっとお気軽にご相談ください。
                 </p>
-                <a class="btn" href="#ABOUT">MORE ABOUT</a>
+                <a class="btn" href="">MORE ABOUT</a>
             </div>
+        </section>
 
-
+        <section id="SERVICE">
+            <h2>SERVICE</h2>
+            <div class="SERVICE_container">
+                <div class="SERVICE_graphic">
+                    <img src="./images/Graphic.svg" alt="グラフィックデザイン">
+                    <h3>Graphic Design</h3>
+                    <p>チラシや名刺などの紙ものデザインから、SNSの投稿デザインやバナー作成など、届けたい想いを形にします。</p>
+                </div>
+                <div class="line">
+                    <span></span>
+                </div>
+                <div class="SERVICE_web">
+                    <img src="./images/Web.svg" alt="ウェブデザイン">
+                    <h3>Web Design</h3>
+                    <p>デザイン、コーディング、実装はもちろん、ブランディングやライティングもサポートします。</p>
+                </div>
+                <div class="line">
+                    <span></span>
+                </div>
+                <div class="SERVICE_Pers">
+                    <img src="./images/Pers.svg" alt="手書きパース">
+                    <h3>Perspective Drawing</h3>
+                    <p>各種図面をお送りください。CGでは表現できない、温かみのある手書き内装パースを作成します。</p>
+                </div>
+            </div>
+            <a class="btn" href="">SERVICE&PRICE</a>
+        </section>
+        <section id="WORKS">
+            <h2>WORKS</h2>
+            <div class="WORKS_web">
+                <h3>WEB</h3>
+                <div class="WEB_slider">
+                    <div>
+                        <a href="">
+                            <img src="./images/web_1-80.jpg" alt="ポートフォリオサイト">
+                            <p>自主制作<br>ポートフォリオサイト<br>WEBサイト</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="./images/web_2-80.jpg" alt="美容室サイト">
+                            <p>スクール課題<br>美容室ページデザイン<br>WEBサイト</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="./images/web_3-80.jpg" alt="コワーキングスペースサイト">
+                            <p>スクール課題<br>コワーキングスペース<br>WEBサイト</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="./images/web_4-80.jpg" alt="カフェサイト">
+                            <p>スクール課題<br>カフェサイトコーディング<br>WEBサイト</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="GRAPHIC_slider">
+                    <a href="">
+                        <img src="./images/poster_AB.jpg" alt="A2ポスター2種">
+                    </a>
+                    <a href="">
+                        <img src="" alt="">
+                    </a>
+                    <a href="">
+                        <img src="" alt="">
+                    </a>
+                </div>
+                <div class="PERS_slider">
+                    <a href="">
+                        <img src="" alt="">
+                    </a>
+                    <a href="">
+                        <img src="" alt="">
+                    </a>
+                    <a href="">
+                        <img src="" alt="">
+                    </a>
+                </div>
+            </div>
         </section>
 
     </main>
@@ -80,8 +183,15 @@
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();
             })
+
+            $('.WEB_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+            });
         });
     </script>
+
 </body>
 
 </html>
