@@ -255,16 +255,18 @@ h2 {
 /* ランプのアニメーション */
 
 .lamp {
-    width: 750px;
-    height: 790px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 750 / 790;
     background: url("../images/lamp.png") no-repeat;
     animation: fuwari 1.8s steps(8);
     animation-fill-mode: forwards;
+    background-size: auto 100%;
 }
 
 @keyframes fuwari {
     to {
-        background-position: -6000px 0;
+        background-position: 100% 0;
     }
 }
 
@@ -278,6 +280,10 @@ h2 {
     to {
         background-position: -6750px 0;
     }
+}
+
+.lamp_animation {
+    width: 50%;
 }
 
 /* SERVICEセクション */
@@ -333,7 +339,146 @@ h2 {
 
 #SERVICE .btn {
     margin: 0 auto;
-    margin-bottom: 65px;
+    margin-bottom: 27px;
+}
+
+.line_anime_pc_about_service {
+    width: 205px;
+    padding-left: 35%;
+}
+
+.line_anime_pc_about_service path {
+    fill: none;
+    stroke: #f0b822;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    -webkit-animation: drawing 6s linear forwards;
+    animation: drawing 6s linear forwards;
+}
+
+.line_anime_sp {
+    display: none;
+}
+
+@keyframes drawing {
+    0% {
+        stroke-dashoffset: 2000;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.line_anime_pc_service_works {
+    width: 172px;
+    display: block;
+    margin: 0 auto;
+}
+
+.line_anime_pc_service_works path {
+    fill: none;
+    stroke: #f0b822;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    -webkit-animation: drawing 6s linear forwards;
+    animation: drawing 6s linear forwards;
+}
+
+/* WORKSセクション */
+#WORKS {
+    max-width: 1920px;
+    margin-top: 22px;
+}
+
+#WORKS h2 {
+    padding-bottom: 220px;
+    text-align: center;
+}
+
+.WORKS_slider_title {
+    display: flex;
+    align-items: center;
+}
+
+#WORKS h3 {
+    padding-left: 13%;
+    padding-right: 3%;
+    font-family: "futura-100-book", sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+}
+
+.WORKS_slider_title span {
+    display: block;
+    width: 80%;
+    height: 2px;
+    background: #f0b822;
+    border-radius: 2px;
+}
+
+.slider_title p {
+    padding-top: 32px;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.12em;
+}
+
+.slider_category p {
+    padding-top: 22px;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+}
+
+/* slick */
+
+.slider {
+    padding-top: 134px;
+}
+
+.arrow_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 121px 0 0;
+    position: relatives;
+
+}
+
+.prev-arrow,
+.next-arrow {
+    display: block;
+    width: 100px;
+    height: 32px;
+    transition: all .3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.prev-arrow::before {
+    position: absolute;
+    content: "PREV";
+    font-family: "futura-100-book", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+}
+
+.next-arrow::before {
+    position: absolute;
+    content: "NEXT";
+    font-family: "futura-100-book", sans-serif;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    font-weight: 400;
 }
 
 /* ハンバーガーメニューのみになる時 */
@@ -354,7 +499,43 @@ h2 {
     }
 
     .lamp_animation {
+        width: 65%;
         margin: 0 auto;
     }
 
+    .SERVICE_container {
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .line span {
+        width: 290px;
+        height: 2px;
+    }
+
+    .line_anime_sp {
+        display: block;
+    }
+
+    .line_anime_pc_about_service {
+        display: none;
+    }
+
+    .line_anime_sp path {
+        fill: none;
+        stroke: #f0b822;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+        -webkit-animation: drawing 6s linear forwards;
+        animation: drawing 6s linear forwards;
+    }
+
+    .line_anime_sp {
+        width: 395px;
+        margin: 0 auto;
+        padding: 105px 0 83px 0;
+    }
 }
