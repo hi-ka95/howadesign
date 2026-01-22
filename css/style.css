@@ -395,6 +395,8 @@ h2 {
 #WORKS {
     max-width: 1920px;
     margin-top: 22px;
+    margin: 0 auto;
+
 }
 
 #WORKS h2 {
@@ -441,6 +443,7 @@ h2 {
 
 .slider {
     padding-top: 134px;
+    padding: 134px 20px 0 20px;
 }
 
 .arrow_box {
@@ -448,7 +451,7 @@ h2 {
     align-items: center;
     justify-content: center;
     margin: 121px 0 0;
-    position: relatives;
+    position: relative;
 
 }
 
