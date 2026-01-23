@@ -70,6 +70,7 @@ body {
     font-weight: 400;
     font-style: normal;
     letter-spacing: 0.075em;
+    transition: 0.3s;
 }
 
 .sp_btn span {
@@ -79,6 +80,7 @@ body {
     background: #373741;
     border-radius: 2px;
     position: relative;
+    transition: 0.3s;
 }
 
 .sp_btn span::before {
@@ -89,6 +91,7 @@ body {
     background: #373741;
     border-radius: 2px;
     position: absolute;
+    transition: 0.3s
 }
 
 .sp_btn span::after {
@@ -99,7 +102,8 @@ body {
     background: #373741;
     border-radius: 2px;
     position: absolute;
-    top: 10px
+    top: 10px;
+    transition: 0.3s
 }
 
 /* ばつ印 */
@@ -120,11 +124,13 @@ body {
 .sp_btn.open span::before {
     display: block;
     transform: rotate(45deg);
+    transition: 0.3s;
 }
 
 .sp_btn.open span::after {
     top: 0;
     transform: rotate(-45deg);
+    transition: 0.3s;
 }
 
 /* メニュー 見た目*/
@@ -134,7 +140,7 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(244, 241, 218, 0.8);
+    background: rgba(244, 241, 218, 1);
     z-index: 1;
 }
 
@@ -164,6 +170,7 @@ body {
 
 .sp_nav_menu p {
     padding-top: 160px;
+    padding-bottom: 83px;
     font-size: 18px;
     line-height: 2.2;
     letter-spacing: 0.16em;
@@ -171,15 +178,21 @@ body {
 }
 
 .contact_btn {
-    margin-top: 80px;
-    width: 250px;
+    display: block;
     background: #f0b822;
     color: #fff;
-    padding: 25px;
+    width: 296px;
+    padding: 23px 0;
+    position: relative;
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
     letter-spacing: 0.1em;
     border-radius: 32px;
+    transition: all .2s;
+}
+
+.contact_btn:hover {
+    opacity: 0.6;
 }
 
 /* イントロ部分 */
@@ -220,9 +233,9 @@ body {
 }
 
 h2 {
-    font-family: "futura-100", sans-serif;
+    font-family: "futura-100-book", sans-serif;
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
     letter-spacing: 0.1em;
 }
@@ -239,9 +252,9 @@ h2 {
 
 .btn {
     display: block;
-    width: 296px;
+    width: 294px;
     background: #fff;
-    padding: 22px;
+    padding: 22px 0;
     text-align: center;
     font-family: "futura-100-book", sans-serif;
     font-size: 18px;
@@ -250,6 +263,11 @@ h2 {
     letter-spacing: 0.1em;
     border-radius: 32px;
     border: 1px solid #373741;
+    transition: all .2s
+}
+
+.btn:hover {
+    opacity: 0.6;
 }
 
 /* ランプのアニメーション */
@@ -393,7 +411,7 @@ h2 {
 
 /* WORKSセクション */
 #WORKS {
-    max-width: 1920px;
+    max-width: 100%;
     margin-top: 22px;
     margin: 0 auto;
 
@@ -426,6 +444,116 @@ h2 {
     border-radius: 2px;
 }
 
+/* CONTACTセクション */
+#CONTACT {
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 285px;
+    margin-bottom: 255px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_message {
+    margin-left: 20%;
+}
+
+.contact_message p {
+    width: 314px;
+    font-size: 28px;
+    line-height: 2;
+    letter-spacing: 0.12em;
+}
+
+.line_anime_box {
+    margin-right: 1%;
+    margin-left: 8%;
+}
+
+.line_anime_pc_contact {
+    width: 168px;
+}
+
+.line_anime_pc_contact path {
+    fill: none;
+    stroke: #f0b822;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    -webkit-animation: drawing 6s linear forwards;
+    animation: drawing 6s linear forwards;
+}
+
+.contact_container {
+    margin-right: 20%;
+}
+
+.contact_container p {
+    width: 328px;
+    font-size: 18px;
+    line-height: 2.5;
+    letter-spacing: 0.12em;
+    padding: 120px 0;
+}
+
+/* フッター */
+
+.pc_footer_wrap {
+    padding: 0 20%;
+    padding-bottom: 92px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pc_footer_wrap img {
+    width: 43px;
+}
+
+.pc_footer_wrap p {
+    font-family: "futura-100-book", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.1em;
+}
+
+.sp_footer_wrap {
+    display: none;
+}
+
+/* slick */
+
+.slider {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 134px 20px 0 20px;
+}
+
+/* .slider_graphic {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 134px 20px 0 20px;
+}
+
+.slider_pers {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 134px 20px 0 20px;
+} */
+
+.slick-slide {
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
 .slider_title p {
     padding-top: 32px;
     font-size: 18px;
@@ -439,49 +567,40 @@ h2 {
     letter-spacing: 0.12em;
 }
 
-/* slick */
-
-.slider {
-    padding-top: 134px;
-    padding: 134px 20px 0 20px;
-}
-
-.slider li {
-    margin-right: 1%;
-    margin-left: 1%;
-}
-
 .arrow_box {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 121px 0 0;
+    margin: 121px 0 228px;
     position: relative;
-
 }
 
 .prev-arrow,
 .next-arrow {
     display: block;
-    width: 100px;
     height: 32px;
     transition: all .3s ease;
     cursor: pointer;
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    padding: 0 54px;
+}
+
+.prev-arrow {
+    border-right: 1px solid #373741;
 }
 
 .prev-arrow::before {
-    position: absolute;
-    content: "PREV";
+    content: "←";
     font-family: "futura-100-book", sans-serif;
     font-size: 18px;
     letter-spacing: 0.1em;
     font-weight: 400;
 }
 
-.next-arrow::before {
-    position: absolute;
-    content: "NEXT";
+.next-arrow::after {
+    content: "→";
     font-family: "futura-100-book", sans-serif;
     text-align: center;
     font-size: 18px;
@@ -490,7 +609,7 @@ h2 {
 }
 
 /* ハンバーガーメニューのみになる時 */
-@media screen and (max-width:1300px) {
+@media screen and (max-width:1100px) {
 
     .pc_nav {
         display: none;
@@ -521,15 +640,15 @@ h2 {
         height: 2px;
     }
 
-    .line_anime_sp {
+    /* .line_anime_sp {
         display: block;
     }
 
     .line_anime_pc_about_service {
         display: none;
-    }
+    } */
 
-    .line_anime_sp path {
+    /* .line_anime_sp path {
         fill: none;
         stroke: #f0b822;
         stroke-linecap: round;
@@ -545,5 +664,34 @@ h2 {
         width: 395px;
         margin: 0 auto;
         padding: 105px 0 83px 0;
+    } */
+
+    .sp_footer_wrap {
+        padding: 198px 20px;
+    }
+
+    .pc_footer_wrap {
+        display: none;
+    }
+
+    .sp_footer_wrap {
+        display: block;
+        display: flex;
+    }
+
+    .sp_footer_nav li {
+        font-family: "futura-100-book", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.1em;
+    }
+
+    .sp_footer_nav img {
+        width: 29px;
+    }
+
+    .page_top img {
+        width: 110px;
     }
 }
