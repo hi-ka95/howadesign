@@ -150,7 +150,7 @@
                 <h3>WEB</h3>
                 <span></span>
             </div>
-            <div class="slider">
+            <div class="slider_web">
                 <div>
                     <a href="">
                         <img src="./images/web_1-80.jpg" alt="ポートフォリオサイト">
@@ -202,7 +202,7 @@
                 <h3>GRAPHIC</h3>
                 <span></span>
             </div>
-            <div class="slider">
+            <div class="slider_graphic">
                 <div>
                     <a href="">
                         <img src="./images/graphic_1.jpg" alt="A2ポスター2種">
@@ -243,7 +243,7 @@
                 <h3>PERS</h3>
                 <span></span>
             </div>
-            <div class="slider">
+            <div class="slider_pers">
                 <div>
                     <a href="">
                         <img src="./images/pers_1.jpg" alt="キッチンダイニングパース">
@@ -341,12 +341,13 @@
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();
             })
-            $('.slider').slick({
+
+            $('.slider_web').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 dots: false,
                 arrows: true,
-                appendArrows: $('.arrow_box. web'),
+                appendArrows: $('.arrow_box.web'),
                 prevArrow: '<div class="slide-arrow prev-arrow">PREV</div>',
                 nextArrow: '<div class="slide-arrow next-arrow">NEXT</div>',
                 responsive: [{
@@ -356,7 +357,8 @@
                     }
                 }]
             });
-            $('.slider').slick({
+
+            $('.slider_graphic').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 dots: false,
@@ -371,7 +373,8 @@
                     }
                 }]
             });
-            $('.slider').slick({
+
+            $('.slider_pers').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 dots: false,

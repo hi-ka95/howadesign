@@ -528,14 +528,14 @@ h2 {
 
 /* slick */
 
-.slider {
+.slider_web {
     display: flex;
     max-width: 100%;
     margin: 0 auto;
     padding: 134px 20px 0 20px;
 }
 
-/* .slider_graphic {
+.slider_graphic {
     display: flex;
     max-width: 100%;
     margin: 0 auto;
@@ -547,7 +547,7 @@ h2 {
     max-width: 100%;
     margin: 0 auto;
     padding: 134px 20px 0 20px;
-} */
+}
 
 .slick-slide {
     margin-right: 1%;
