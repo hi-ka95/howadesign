@@ -446,6 +446,11 @@ h2 {
     padding: 134px 20px 0 20px;
 }
 
+.slider li {
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
 .arrow_box {
     display: flex;
     align-items: center;
