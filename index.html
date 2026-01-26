@@ -82,8 +82,10 @@
         </div>
 
         <section id="ABOUT">
-            <div class="lamp_animation">
-                <div class="lamp"></div>
+            <div class="inview">
+                <div class="lamp_animation">
+                    <div class="lamp"></div>
+                </div>
             </div>
             <div class="ABOUT_box">
                 <h2>ABOUT</h2>
@@ -97,12 +99,14 @@
             </div>
         </section>
 
-        <svg class="line_anime_pc_about_service" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 207 432.56">
-            <g id="line">
-                <path class="inview"
-                    d="M72.1,1.03c24.54-.97,44.18,24.21,44.24,48.62.07,24.4-14.52,46.62-31.89,63.87-17.37,17.25-37.94,31.14-54.77,48.92-13.38,14.13-24.47,31.18-27.77,50.31-3.3,19.13,2.35,40.48,17.46,52.77,19.8,16.1,48.36,12.94,73.91,11.68,25.55-1.26,56.18,3.29,67.27,26.2,10.49,21.67-2.67,47.07-1.81,71.11.95,26.46,21.32,51.04,47.26,57.06" />
-            </g>
-        </svg>
+        <div class="inview">
+            <svg class="line_anime_pc_about_service" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 207 432.56">
+                <g id="line">
+                    <path
+                        d="M72.1,1.03c24.54-.97,44.18,24.21,44.24,48.62.07,24.4-14.52,46.62-31.89,63.87-17.37,17.25-37.94,31.14-54.77,48.92-13.38,14.13-24.47,31.18-27.77,50.31-3.3,19.13,2.35,40.48,17.46,52.77,19.8,16.1,48.36,12.94,73.91,11.68,25.55-1.26,56.18,3.29,67.27,26.2,10.49,21.67-2.67,47.07-1.81,71.11.95,26.46,21.32,51.04,47.26,57.06" />
+                </g>
+            </svg>
+        </div>
 
         <!-- <svg class="line_anime_sp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375.05 75.83">
             <g id="line">
@@ -382,7 +386,10 @@
             </div>
         </footer>
     </main>
+
+    <!-- inview.js -->
     <script src="./jquery.inview.min.js"></script>
+
     <script>
         $(function () {
             $('.sp_btn').on('click', function () {
@@ -439,7 +446,6 @@
             });
 
             $(".inview").on("inview", function (event, isInView) {
-                console.log('inview')
                 if (isInView) {
                     $(this).stop().addClass("is-show");
                 }

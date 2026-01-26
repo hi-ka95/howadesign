@@ -251,8 +251,11 @@ h2 {
 .lamp {
     width: 100%;
     height: auto;
-    aspect-ratio: 750 / 790;
     background: url("../images/lamp.png") no-repeat;
+    aspect-ratio: 750 / 790;
+}
+
+.is-show .lamp_animation.lamp {
     animation: fuwari 1.8s steps(8);
     animation-fill-mode: forwards;
     background-size: auto 100%;
@@ -336,6 +339,7 @@ h2 {
     margin-bottom: 27px;
 }
 
+/* ラインアニメーション */
 .line_anime_pc_about_service {
     width: 205px;
     padding-left: 35%;
@@ -351,12 +355,11 @@ h2 {
     stroke-dashoffset: 2000;
 }
 
-.line_anime_pc_about_service path.inview.is-show {
+.is-show .line_anime_pc_about_service path {
     -webkit-animation: drawing 6s linear forwards;
     animation: drawing 6s linear forwards;
 
 }
-
 
 .line_anime_sp {
     display: none;
