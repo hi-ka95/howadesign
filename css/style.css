@@ -349,9 +349,14 @@ h2 {
     stroke-width: 2px;
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
+}
+
+.line_anime_pc_about_service path.inview.is-show {
     -webkit-animation: drawing 6s linear forwards;
     animation: drawing 6s linear forwards;
+
 }
+
 
 .line_anime_sp {
     display: none;
@@ -655,11 +660,7 @@ h2 {
 
     #sp_CONTACT {
         display: block;
-    }
-
-    .sp_contact_container {
         position: relative;
-        top: 100px;
     }
 
     .sp_contact_container h2 {
@@ -691,7 +692,8 @@ h2 {
         width: 213px;
         position: absolute;
         top: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .line_anime_sp_contact path {
