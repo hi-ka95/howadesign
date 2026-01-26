@@ -21,7 +21,7 @@ body {
     left: 0;
 }
 
-/* ヘッダー */
+/* ヘッダー
 #header {
     padding-top: 88px;
 }
@@ -52,7 +52,7 @@ body {
 }
 
 /* ハンバーガーメニュー */
-.sp_nav {
+/* .sp_nav {
     display: none;
 }
 
@@ -107,34 +107,10 @@ body {
 }
 
 /* ばつ印 */
-.sp_btn.open {
-    display: flex;
-    align-items: center;
-}
-
-.sp_btn.open span {
-    background: transparent;
-}
-
-.sp_btn.open p {
-    display: block;
-    padding-right: 14px;
-}
-
-.sp_btn.open span::before {
-    display: block;
-    transform: rotate(45deg);
-    transition: 0.3s;
-}
-
-.sp_btn.open span::after {
-    top: 0;
-    transform: rotate(-45deg);
-    transition: 0.3s;
-}
+/* s */
 
 /* メニュー 見た目*/
-.sp_nav {
+/* .sp_nav {
     position: absolute;
     top: 0;
     left: 0;
@@ -193,7 +169,7 @@ body {
 
 .contact_btn:hover {
     opacity: 0.6;
-}
+} */
 
 /* イントロ部分 */
 
