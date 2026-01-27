@@ -21,156 +21,6 @@ body {
     left: 0;
 }
 
-/* ヘッダー
-#header {
-    padding-top: 88px;
-}
-
-.header_wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 12%;
-}
-
-.header_logo {
-    width: 152px;
-}
-
-.pc_nav ul {
-    display: flex;
-    gap: 58px;
-}
-
-.pc_nav ul li {
-    width: 90px;
-    font-family: "futura-100-book", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.1em;
-}
-
-/* ハンバーガーメニュー */
-/* .sp_nav {
-    display: none;
-}
-
-.sp_btn {
-    height: 11px;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-}
-
-.sp_btn p {
-    display: none;
-    font-family: "futura-100-book", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.075em;
-    transition: 0.3s;
-}
-
-.sp_btn span {
-    display: block;
-    width: 52px;
-    height: 1px;
-    background: #373741;
-    border-radius: 2px;
-    position: relative;
-    transition: 0.3s;
-}
-
-.sp_btn span::before {
-    content: "";
-    display: none;
-    width: 32px;
-    height: 1px;
-    background: #373741;
-    border-radius: 2px;
-    position: absolute;
-    transition: 0.3s
-}
-
-.sp_btn span::after {
-    content: "";
-    display: block;
-    width: 32px;
-    height: 1px;
-    background: #373741;
-    border-radius: 2px;
-    position: absolute;
-    top: 10px;
-    transition: 0.3s
-}
-
-/* ばつ印 */
-/* s */
-
-/* メニュー 見た目*/
-/* .sp_nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(244, 241, 218, 1);
-    z-index: 1;
-}
-
-.sp_nav_menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.sp_nav_menu ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 56px;
-}
-
-.sp_nav_menu li {
-    font-family: "futura-100-book", sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.1em;
-}
-
-.sp_nav_menu p {
-    padding-top: 160px;
-    padding-bottom: 83px;
-    font-size: 18px;
-    line-height: 2.2;
-    letter-spacing: 0.16em;
-    text-align: center;
-}
-
-.contact_btn {
-    display: block;
-    background: #f0b822;
-    color: #fff;
-    width: 296px;
-    padding: 23px 0;
-    position: relative;
-    text-align: center;
-    font-size: 18px;
-    letter-spacing: 0.1em;
-    border-radius: 32px;
-    transition: all .2s;
-}
-
-.contact_btn:hover {
-    opacity: 0.6;
-} */
-
 /* イントロ部分 */
 
 .intro {
@@ -221,7 +71,7 @@ h2 {
     padding-bottom: 97px;
     font-size: 18px;
     line-height: 2.5;
-    font-weight: medium;
+    font-weight: 500;
     letter-spacing: 0.12em;
     text-align: left;
 }
@@ -246,6 +96,7 @@ h2 {
     opacity: 0.6;
 }
 
+
 /* ランプのアニメーション */
 
 .lamp {
@@ -255,7 +106,7 @@ h2 {
     aspect-ratio: 750 / 790;
 }
 
-.is-show .lamp_animation.lamp {
+.is-show.lamp_animation .lamp {
     animation: fuwari 1.8s steps(8);
     animation-fill-mode: forwards;
     background-size: auto 100%;
@@ -300,6 +151,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px 120px 20px;
+    /* position: relative; */
 }
 
 #SERVICE img {
@@ -326,13 +178,30 @@ h2 {
     letter-spacing: 0.1em;
 }
 
-.line span {
+/* .line span {
     display: block;
     width: 2px;
     height: 432px;
     background: #f0b822;
     border-radius: 2px;
+} */
+
+/* 縦線のアニメーション */
+.line {
+    width: 2px;
+    height: 0;
+    background-color: #f0b822;
+    transition: height 1s ease-out;
+    /* 1秒かけて伸びる */
 }
+
+.line.active {
+    height: 432px;
+    /* 最終的な長さ */
+}
+
+
+
 
 #SERVICE .btn {
     margin: 0 auto;
@@ -340,9 +209,10 @@ h2 {
 }
 
 /* ラインアニメーション */
+
 .line_anime_pc_about_service {
     width: 205px;
-    padding-left: 35%;
+    padding-left: 38%;
 }
 
 .line_anime_pc_about_service path {
@@ -355,10 +225,10 @@ h2 {
     stroke-dashoffset: 2000;
 }
 
-.is-show .line_anime_pc_about_service path {
+.is-show .line_anime_pc_about_service path,
+.is-show .line_anime_pc_service_works path {
     -webkit-animation: drawing 6s linear forwards;
     animation: drawing 6s linear forwards;
-
 }
 
 .line_anime_sp {
@@ -390,8 +260,6 @@ h2 {
     stroke-width: 2px;
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
-    -webkit-animation: drawing 6s linear forwards;
-    animation: drawing 6s linear forwards;
 }
 
 
@@ -442,7 +310,7 @@ h2 {
     padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 /* .contact_message {
@@ -457,7 +325,7 @@ h2 {
 }
 
 .line_anime_box {
-    margin-right: 1%;
+    margin-right: 31px;
     margin-left: 8%;
 }
 
@@ -473,8 +341,13 @@ h2 {
     stroke-width: 2px;
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
+}
+
+.is-show .line_anime_pc_contact path,
+.is-show .line_anime_sp_contact path {
     -webkit-animation: drawing 6s linear forwards;
     animation: drawing 6s linear forwards;
+
 }
 
 .contact_container p {
@@ -487,8 +360,13 @@ h2 {
 
 /* フッター */
 
+#footer {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+}
+
 .pc_footer_wrap {
-    padding: 0 15%;
     padding-bottom: 92px;
     display: flex;
     justify-content: space-between;
@@ -516,27 +394,29 @@ h2 {
 
 .slider_web {
     display: flex;
-    max-width: 100%;
     margin: 0 auto;
-    padding: 134px 20px 0 20px;
+    padding-top: 134px;
+    padding-left: 20px;
 }
 
 .slider_graphic {
     display: flex;
     max-width: 100%;
     margin: 0 auto;
-    padding: 134px 20px 0 20px;
+    padding-top: 134px;
+    padding-left: 20px;
 }
 
 .slider_pers {
     display: flex;
     max-width: 100%;
     margin: 0 auto;
-    padding: 134px 20px 0 20px;
+    padding-top: 134px;
+    padding-left: 20px;
 }
 
 .slick-slide {
-    margin-right: 64px;
+    margin-right: 32px;
 }
 
 .slider_title p {
@@ -569,7 +449,7 @@ h2 {
     display: flex;
     align-items: center;
     gap: 27px;
-    padding: 0 54px;
+    padding: 0 27px;
 }
 
 .prev-arrow {
@@ -593,76 +473,15 @@ h2 {
     font-weight: 400;
 }
 
-/* ハンバーガーメニューのみになる時 */
-@media screen and (max-width:1000px) {
-
-    .pc_nav {
-        display: none;
-    }
-
-    .header_logo {
-        width: 80px;
-    }
-
-    #ABOUT {
-        max-width: 100%;
-        flex-direction: column;
-        gap: 170px;
-    }
-
-    .lamp_animation {
-        width: 65%;
-        margin: 0 auto;
-    }
-
-    .SERVICE_container {
-        flex-direction: column;
-        gap: 64px;
-    }
-
-    .line span {
-        width: 290px;
-        height: 2px;
-    }
-
-    /* .line_anime_sp {
-        display: block;
-    }
-
-    .line_anime_pc_about_service {
-        display: none;
-    } */
-
-    /* .line_anime_sp path {
-        fill: none;
-        stroke: #f0b822;
-        stroke-linecap: round;
-        stroke-miterlimit: 10;
-        stroke-width: 2px;
-        stroke-dasharray: 2000;
-        stroke-dashoffset: 2000;
-        -webkit-animation: drawing 6s linear forwards;
-        animation: drawing 6s linear forwards;
-    }
-
-    .line_anime_sp {
-        width: 395px;
-        margin: 0 auto;
-        padding: 105px 0 83px 0;
-    } */
-
-
-    .slick-slide {
-        margin-right: 32px;
-    }
-
-    /* コンタクトセクションレスポンシブ */
+/* ブレイクポイント1 */
+@media screen and (max-width:1023px) {
     #CONTACT {
         display: none;
     }
 
     #sp_CONTACT {
         display: block;
+        /* margin-bottom: 45px; */
         position: relative;
     }
 
@@ -672,16 +491,18 @@ h2 {
     }
 
     .sp_contact_container p {
-        width: 58px;
         writing-mode: vertical-rl;
         font-size: 18px;
-        line-height: 2;
+        line-height: 2.2;
         letter-spacing: 0.16em;
-        margin: 0 auto;
+        margin: 104px auto 110px;
     }
 
     .contact_btn {
         margin: 0 auto;
+        width: 250px;
+        padding: 23px 0;
+        font-size: 15px;
     }
 
     .sp_contact_info p {
@@ -689,14 +510,16 @@ h2 {
         line-height: 2;
         letter-spacing: 0.1em;
         text-align: center;
+        padding-top: 62px;
     }
 
     .line_anime_sp_contact {
         width: 213px;
         position: absolute;
-        top: 0;
+        top: 75px;
         left: 50%;
         transform: translateX(-50%);
+        z-index: -1;
     }
 
     .line_anime_sp_contact path {
@@ -707,17 +530,192 @@ h2 {
         stroke-width: 2px;
         stroke-dasharray: 2000;
         stroke-dashoffset: 2000;
-        -webkit-animation: drawing 6s linear forwards;
-        animation: drawing 6s linear forwards;
     }
 
+    /* アバウトセクション縦ならび */
+    #ABOUT {
+        max-width: 100%;
+        flex-direction: column;
+        gap: 170px;
+    }
 
+    .lamp_animation {
+        width: 78%;
+        margin: 0 auto;
+    }
+
+    .line_anime_pc_about_service {
+        width: 160px;
+        padding: 10px 38%;
+    }
+
+    .ABOUT_box p {
+        padding-top: 116px;
+        padding-bottom: 97px;
+        font-size: 14px;
+        line-height: 2.5;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-align: left;
+    }
+
+    .btn {
+        display: block;
+        width: 250px;
+        background: #fff;
+        padding: 23px 0;
+        text-align: center;
+        font-family: "futura-100-book", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.1em;
+        border-radius: 32px;
+        border: 1px solid #373741;
+        transition: all .2s
+    }
+
+    /* サービス縦並び */
+    .SERVICE_container {
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    #SERVICE h2 {
+        text-align: center;
+        padding-bottom: 134px;
+    }
+
+    #SERVICE img {
+        width: 77px;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 36px;
+    }
+
+    #SERVICE h3 {
+        padding-bottom: 19px;
+        text-align: center;
+        font-size: 21px;
+        letter-spacing: 0.1em;
+    }
+
+    .SERVICE_container p {
+        font-size: 14px;
+    }
+
+    .line span {
+        width: 335px;
+        height: 2px;
+    }
+
+    #SERVICE .btn {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .line_anime_pc_service_works {
+        width: 128px;
+        padding-bottom: 10px;
+    }
 }
 
+/* ブレイクポイント２ */
+/* ハンバーガーメニューのみになる時 */
 @media screen and (max-width:767px) {
+
+    .pc_nav {
+        display: none;
+    }
+
+    .header_logo {
+        width: 80px;
+    }
+
+    .intro {
+        margin: 0 auto;
+        padding-top: 160px;
+        padding-bottom: 164px;
+    }
+
+    .intro_ja p {
+        font-size: 18px;
+    }
+
+    .intro_en p {
+        padding-top: 34px;
+        font-size: 14px;
+        font-family: "futura-100-book", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.1em;
+    }
+
+    h2 {
+        font-family: "futura-100", sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    /* スライダー1枚表示 */
+    .slick-slide {
+        margin-right: 20px;
+    }
+
+    #WORKS h2 {
+        padding-bottom: 134px;
+    }
+
+    #WORKS h3 {
+        font-size: 22px;
+        padding: 0 20px 0 18px;
+    }
+
+    .slider_web {
+        padding-top: 64px;
+    }
+
+    .slider_title p {
+        padding-top: 16px;
+        font-size: 14px;
+    }
+
+    .slider_category p {
+        font-size: 12px;
+    }
+
+    .arrow_box {
+        margin: 64px 0 104px 0;
+    }
+
+    .slider_graphic {
+        padding-top: 64px;
+    }
+
+    .slider_pers {
+        padding-top: 64px;
+    }
+
+    .prev-arrow,
+    .next-arrow {
+        display: block;
+        height: 32px;
+        transition: all .3s ease;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .prev-arrow::before,
+    .next-arrow::after {
+        font-size: 16px;
+    }
 
     /* フッターのレスポンシブ */
     .sp_footer_wrap {
+        max-width: 100%;
         padding: 198px 20px;
     }
 
@@ -728,12 +726,8 @@ h2 {
     .sp_footer_wrap {
         display: block;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: end;
-    }
-
-    .sp_footer_nav {
-        padding-right: 156px;
     }
 
     .sp_footer_nav li {
@@ -761,6 +755,6 @@ h2 {
 }
 
 /* 全要素のアウトラインを確認 */
-* {
+/* * {
     outline: 1px solid magenta;
-}
+} */

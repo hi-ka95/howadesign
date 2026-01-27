@@ -23,14 +23,15 @@ body {
 
 /* ヘッダー */
 #header {
+    max-width: 1440px;
     padding-top: 88px;
+    margin: 0 auto;
 }
 
 .header_wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 12%;
 }
 
 .header_logo {
@@ -39,16 +40,17 @@ body {
 
 .pc_nav ul {
     display: flex;
-    gap: px;
+    gap: 4%;
 }
 
 .pc_nav ul li {
-    width: 70px;
+    width: 112px;
     font-family: "futura-100-book", sans-serif;
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
     letter-spacing: 0.1em;
+    text-align: center;
 }
 
 /* ハンバーガーメニュー */
@@ -193,4 +195,35 @@ body {
 
 .contact_btn:hover {
     opacity: 0.6;
+}
+
+/* ロゴセクション */
+#logo {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+.logo_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1%;
+}
+
+.logo_box p {
+    writing-mode: vertical-rl;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.12em;
+}
+
+.logo_box img {
+    width: 390px;
 }
