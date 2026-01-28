@@ -104,12 +104,12 @@ h2 {
     height: auto;
     background: url("../images/lamp.png") no-repeat;
     aspect-ratio: 750 / 790;
+    background-size: auto 100%;
 }
 
 .is-show.lamp_animation .lamp {
     animation: fuwari 1.8s steps(8);
     animation-fill-mode: forwards;
-    background-size: auto 100%;
 }
 
 @keyframes fuwari {
@@ -187,12 +187,21 @@ h2 {
 } */
 
 /* 縦線のアニメーション */
+
+.inview_verticalLine {
+    width: 2px;
+    height: 432px;
+    position: relative;
+}
+
 .line {
     width: 2px;
     height: 0;
     background-color: #f0b822;
     transition: height 1s ease-out;
     /* 1秒かけて伸びる */
+    position: absolute;
+    top: 0;
 }
 
 .line.active {
@@ -546,7 +555,9 @@ h2 {
 
     .line_anime_pc_about_service {
         width: 160px;
-        padding: 10px 38%;
+        display: block;
+        padding: 10px 0;
+        margin: 0 auto;
     }
 
     .ABOUT_box p {
@@ -754,7 +765,7 @@ h2 {
     }
 }
 
-/* 全要素のアウトラインを確認 */
+/* 全要素のアウトラインを確認  */
 /* * {
     outline: 1px solid magenta;
 } */

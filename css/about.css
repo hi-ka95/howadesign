@@ -24,7 +24,7 @@ body {
 /* ヘッダー */
 #header {
     max-width: 1440px;
-    padding-top: 88px;
+    padding: 88px 20px 0 20px;
     margin: 0 auto;
 }
 
@@ -201,6 +201,8 @@ body {
 #logo {
     max-width: 1120px;
     margin: 0 auto;
+    margin-top: 178px;
+    margin-bottom: 260px;
 }
 
 h2 {
@@ -208,6 +210,7 @@ h2 {
     font-size: 22px;
     letter-spacing: 0.1em;
     font-weight: 500;
+    padding-bottom: 93px;
 }
 
 .logo_box {
@@ -227,3 +230,13 @@ h2 {
 .logo_box img {
     width: 390px;
 }
+
+.logo_info p {
+    font-size: 18px;
+    line-height: 2.5;
+    letter-spacing: 0.12em;
+    text-align: center;
+    padding-top: 45px;
+}
+
+/* アバウトミーセクション */

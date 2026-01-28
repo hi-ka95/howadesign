@@ -116,7 +116,7 @@
                     <p>チラシや名刺などの紙ものデザインから、SNSの投稿デザインやバナー作成など、届けたい想いを形にします。</p>
                 </div>
                 <!-- 縦線のアニメーション -->
-                <div class="inview">
+                <div class="inview_verticalLine">
                     <div class="line" id="verticalLine"></div>
                 </div>
 
@@ -450,7 +450,11 @@
                     $(this).stop().addClass("is-show");
                 }
             });
-
+            $(".inview_verticalLine").on("inview_verticalLine", function (event, isInView) {
+                if (isInView) {
+                    $(this).stop().addClass("is-show");
+                }
+            });
         });
 
 
