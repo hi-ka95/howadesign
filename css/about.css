@@ -293,6 +293,10 @@ h3 {
     cursor: none;
 }
 
+#logo_sp {
+    display: none;
+}
+
 /* 横線のアニメーション */
 
 .inview_horizontalLine {
@@ -631,7 +635,133 @@ h3 {
     }
 
     /* logoセクション縦並び */
+    #logo {
+        display: none;
+    }
 
+    #logo_sp {
+        display: block;
+        max-width: 100%;
+        margin-top: 160px;
+        margin-bottom: 189px;
+        padding: 0 20px;
+    }
+
+    h2 {
+        padding-bottom: 48px;
+    }
+
+    h3 {
+        font-size: 20px;
+        padding-bottom: 76px;
+    }
+
+    /* ここから！ */
+    .logo_box {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        align-items: end;
+    }
+
+    .logo_box_text {
+        width: 80px;
+    }
+
+    .polyline {
+        transform: rotate(270deg);
+    }
+
+    .logo_box_text p {
+        font-size: 14px;
+        margin: 0 auto;
+        padding-top: 5px;
+    }
+
+    #logo_sp img {
+        width: 228px;
+    }
+
+    .logo_info p {
+        font-size: 18px;
+        line-height: 2.5;
+        letter-spacing: 0.12em;
+        text-align: center;
+        padding-top: 45px;
+    }
+
+    .circle {
+        display: inline-block;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background: #fff;
+        text-align: center;
+        line-height: 88px;
+        font-size: 18px;
+        letter-spacing: 0.12em;
+        cursor: none;
+    }
+
+    /* 横線のアニメーション */
+
+    .inview_horizontalLine {
+        width: 15%;
+        height: 2px;
+        position: relative;
+    }
+
+    .horizontalline {
+        width: 0;
+        height: 2px;
+        background-color: #f0b822;
+        transition: width 1s ease-out;
+        /* 1秒かけて伸びる */
+        position: absolute;
+        top: 0;
+    }
+
+    .is-show .horizontalline {
+        width: 100%;
+        /* 最終的な長さ */
+    }
+
+    .horizontalline_left {
+        width: 0;
+        height: 2px;
+        background-color: #f0b822;
+        transition: width 1s ease-out;
+        /* 1秒かけて伸びる */
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .is-show .horizontalline_left {
+        width: 100%;
+    }
+
+    .inview_verticalLine_logo {
+        margin: 0 auto;
+        width: 2px;
+        height: 120px;
+        position: relative;
+    }
+
+    .verticalline_logo {
+        width: 2px;
+        height: 0;
+        background-color: #f0b822;
+        transition: height 1s ease-out;
+        /* 1秒かけて伸びる */
+        position: absolute;
+        top: 0;
+    }
+
+    .is-show .verticalline_logo {
+        height: 120px;
+        /* 最終的な長さ */
+    }
 
     /* アバウトセクション縦並び */
     #about_me_pc {
