@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
     <!-- jQueryCDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -41,38 +42,41 @@
     <header id="header">
         <div class="header_wrap">
             <h1 class="header_logo">
-                <img src="./images/header_logo.svg" alt="howa_design_logo">
+                <a href="#header">
+                    <img src="./images/header_logo.svg" alt="howa_design_logo" class="hoverscale">
+                </a>
             </h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#ABOUT">ABOUT</a></li>
-                    <li><a href="#SERVICE">SERVICE</a></li>
-                    <li><a href="#WORKS">WORKS</a></li>
-                    <li><a href="#CONTACT">CONTACT</a></li>
+                    <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                    <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                    <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                    <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
                 </ul>
             </nav>
-            <div class="sp_btn">
+            <div class="sp_btn hoverscale">
                 <p>CLOSE</p>
                 <span></span>
             </div>
             <div class="sp_nav">
                 <div class="sp_nav_menu">
                     <ul>
-                        <li><a href="#ABOUT">ABOUT</a></li>
-                        <li><a href="#SERVICE">SERVICE</a></li>
-                        <li><a href="#WORKS">WORKS</a></li>
-                        <li><a href="#CONTACT">CONTACT</a></li>
+                        <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                        <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                        <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                        <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
                     </ul>
                     <p>ふわっとしたイメージ<br>
                         ほわっと形に。</p>
-                    <a class="contact_btn" href="#CONTACT">お問い合わせフォーム</a>
+                    <a class="contact_btn hoverscale" href="#CONTACT">お問い合わせフォーム</a>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <div class="intro">
+        <!-- 冒頭 -->
+        <div class="intro inview_re fadeIn">
             <div class="intro_ja">
                 <p>ふわっとしたイメージ<br>ほわっと形に。</p>
             </div>
@@ -82,8 +86,9 @@
         </div>
 
         <section id="ABOUT">
-            <div class="lamp_animation inview">
+            <div class="lamp_animation inview_re fadeIn">
                 <div class="lamp"></div>
+                <p>まだ見えていない<br>輪郭に<br>ほわっと光を。</p>
             </div>
             <div class="ABOUT_box">
                 <h2>ABOUT</h2>
@@ -93,7 +98,7 @@
                     <br>話す前から形が決まってなくても大丈夫。<br>
                     ふわっとお気軽にご相談ください。
                 </p>
-                <a class="btn" href="./about.html">MORE ABOUT</a>
+                <a class="btn hoverscale" href="./about.html">MORE ABOUT</a>
             </div>
 
         </section>
@@ -116,8 +121,8 @@
                     <p>チラシや名刺などの紙ものデザインから、SNSの投稿デザインやバナー作成など、届けたい想いを形にします。</p>
                 </div>
                 <!-- 縦線のアニメーション -->
-                <div class="inview_verticalLine">
-                    <div class="line" id="verticalLine"></div>
+                <div class="inview inview_verticalLine">
+                    <div class="verticalline"></div>
                 </div>
 
                 <div class="SERVICE_web">
@@ -125,16 +130,17 @@
                     <h3>Web Design</h3>
                     <p>デザイン、コーディング、実装はもちろん、ブランディングやライティングもサポートします。</p>
                 </div>
-                <div class="line">
-                    <span></span>
+                <div class="inview inview_verticalLine">
+                    <div class="verticalline"></div>
                 </div>
+
                 <div class="SERVICE_Pers">
                     <img src="./images/Pers.svg" alt="手書きパース">
                     <h3>Perspective Drawing</h3>
                     <p>各種図面をお送りください。CGでは表現できない、温かみのある手書き内装パースを作成します。</p>
                 </div>
             </div>
-            <a class="btn" href="">SERVICE&PRICE</a>
+            <a class="btn hoverscale" href="">SERVICE&PRICE</a>
         </section>
 
         <div class="inview">
@@ -150,7 +156,9 @@
             <h2>WORKS</h2>
             <div class="WORKS_slider_title">
                 <h3>WEB</h3>
-                <span></span>
+                <div class="inview inview_horizontalLine">
+                    <div class="horizontalline"></div>
+                </div>
             </div>
             <div class="slider_web">
                 <div>
@@ -198,11 +206,13 @@
                     </a>
                 </div>
             </div>
-            <div class="arrow_box web"></div>
+            <div class="arrow_box web hoverscale"></div>
 
             <div class="WORKS_slider_title">
                 <h3>GRAPHIC</h3>
-                <span></span>
+                <div class="inview inview_horizontalLine">
+                    <div class="horizontalline"></div>
+                </div>
             </div>
             <div class="slider_graphic">
                 <div>
@@ -261,11 +271,13 @@
                     </a>
                 </div>
             </div>
-            <div class="arrow_box graphic"></div>
+            <div class="arrow_box graphic hoverscale"></div>
 
             <div class="WORKS_slider_title">
                 <h3>PERS</h3>
-                <span></span>
+                <div class="inview inview_horizontalLine">
+                    <div class="horizontalline"></div>
+                </div>
             </div>
             <div class="slider_pers">
                 <div>
@@ -302,11 +314,11 @@
                     </a>
                 </div>
             </div>
-            <div class="arrow_box pers"></div>
+            <div class="arrow_box pers hoverscale"></div>
         </section>
 
         <section id="CONTACT">
-            <div class="contact_message">
+            <div class="contact_message inview_re fadeIn">
                 <p>ふわっとを、そのまま<br>持ってきてください</p>
             </div>
             <div class="inview">
@@ -321,18 +333,18 @@
             <div class="contact_container">
                 <h2>CONTACT</h2>
                 <p>平日9:00-17:00<br>平日17時以降にいただいたメールは<br>翌営業日に返信します</p>
-                <a class="contact_btn" href="#CONTACT">お問い合わせフォーム</a>
+                <a class="contact_btn hoverscale" href="#CONTACT">お問い合わせフォーム</a>
             </div>
         </section>
 
         <!-- コンタクトセクションレスポンシブ -->
         <section id="sp_CONTACT">
-            <div class="sp_contact_container">
+            <div class="sp_contact_container inview_re fadeIn">
                 <h2>CONTACT</h2>
                 <p>ふわっとを、そのまま<br>持ってきてください</p>
-                <a class="contact_btn" href="#CONTACT">お問い合わせフォーム</a>
+                <a class="contact_btn hoverscale" href="#CONTACT">お問い合わせフォーム</a>
             </div>
-            <div class="sp_contact_info">
+            <div class="sp_contact_info inview_re fadeIn">
                 <p>平日9:00-17:00<br>平日17時以降にいただいたメールは<br>翌営業日に返信します</p>
             </div>
             <div class="inview">
@@ -348,13 +360,15 @@
 
         <footer id="footer">
             <div class="pc_footer_wrap">
-                <img src="./images/instagram.svg" alt="インスタグラムロゴ">
+                <a href="" class="hoverscale">
+                    <img src="./images/instagram.svg" alt="インスタグラムロゴ">
+                </a>
                 <nav class="pc_nav">
                     <ul>
-                        <li><a href="#ABOUT">ABOUT</a></li>
-                        <li><a href="#SERVICE">SERVICE</a></li>
-                        <li><a href="#WORKS">WORKS</a></li>
-                        <li><a href="#CONTACT">CONTACT</a></li>
+                        <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                        <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                        <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                        <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
                     </ul>
                 </nav>
                 <p>© 2026 howa design.</p>
@@ -363,15 +377,17 @@
             <div class="sp_footer_wrap">
                 <nav class="sp_footer_nav">
                     <ul>
-                        <li><a href="#ABOUT">ABOUT</a></li>
-                        <li><a href="#SERVICE">SERVICE</a></li>
-                        <li><a href="#WORKS">WORKS</a></li>
-                        <li><a href="#CONTACT">CONTACT</a></li>
+                        <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                        <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                        <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                        <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
                     </ul>
-                    <img src="./images/instagram.svg" alt="インスタグラムロゴ">
+                    <a href="" class="hoverscale">
+                        <img src="./images/instagram.svg" alt="インスタグラムロゴ">
+                    </a>
                 </nav>
                 <div class="page_top">
-                    <a href="#header">
+                    <a href="#header" class="hoverscale">
                         <img src="./images/return_top_btn.svg" alt="トップへ戻る">
                     </a>
                 </div>
@@ -391,10 +407,6 @@
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();
             })
-            // 縦線を引くアニメーション
-            window.onload = () => {
-                document.getElementById('verticalLine').classList.add('active');
-            };
 
 
             $('.slider_web').slick({
@@ -450,13 +462,15 @@
                     $(this).stop().addClass("is-show");
                 }
             });
-            $(".inview_verticalLine").on("inview_verticalLine", function (event, isInView) {
-                if (isInView) {
-                    $(this).stop().addClass("is-show");
-                }
-            });
         });
 
+        $(".inview_re").on("inview", function (event, isInView) {
+            if (isInView) {
+                $(this).stop().addClass("is-show");
+            } else {
+                $(this).stop().removeClass("is-show");
+            }
+        });
 
     </script>
 

@@ -1,5 +1,34 @@
 @charset "utf-8";
 
+/* フェードイン */
+.fadeIn {
+    opacity: 0;
+    transition: 2.5s;
+}
+
+.fadeIn.is-show {
+    opacity: 1;
+}
+
+.btn {
+    display: block;
+    width: 294px;
+    background: #fff;
+    padding: 22px 0;
+    text-align: center;
+    font-family: "futura-100-book", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    border-radius: 32px;
+    border: 1px solid #373741;
+}
+
+.btn:hover {
+    opacity: 0.6;
+}
+
 /* 背景 */
 body {
     position: relative;
@@ -201,16 +230,27 @@ body {
 #logo {
     max-width: 1120px;
     margin: 0 auto;
-    margin-top: 178px;
+    margin-top: 293px;
     margin-bottom: 260px;
+    padding: 0 20px;
 }
 
 h2 {
     text-align: center;
+    font-family: "futura-100-book", sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 120px;
+}
+
+h3 {
+    text-align: center;
     font-size: 22px;
     letter-spacing: 0.1em;
     font-weight: 500;
-    padding-bottom: 93px;
+    padding-bottom: 112px;
 }
 
 .logo_box {
@@ -229,6 +269,7 @@ h2 {
 
 .logo_box img {
     width: 390px;
+    padding-bottom: 66px;
 }
 
 .logo_info p {
@@ -239,4 +280,430 @@ h2 {
     padding-top: 45px;
 }
 
+.circle {
+    display: inline-block;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+    line-height: 88px;
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    cursor: none;
+}
+
+/* 横線のアニメーション */
+
+.inview_horizontalLine {
+    width: 15%;
+    height: 2px;
+    position: relative;
+}
+
+.horizontalline {
+    width: 0;
+    height: 2px;
+    background-color: #f0b822;
+    transition: width 1s ease-out;
+    /* 1秒かけて伸びる */
+    position: absolute;
+    top: 0;
+}
+
+.is-show .horizontalline {
+    width: 100%;
+    /* 最終的な長さ */
+}
+
+.horizontalline_left {
+    width: 0;
+    height: 2px;
+    background-color: #f0b822;
+    transition: width 1s ease-out;
+    /* 1秒かけて伸びる */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.is-show .horizontalline_left {
+    width: 100%;
+}
+
+.inview_verticalLine_logo {
+    margin: 0 auto;
+    width: 2px;
+    height: 120px;
+    position: relative;
+}
+
+.verticalline_logo {
+    width: 2px;
+    height: 0;
+    background-color: #f0b822;
+    transition: height 1s ease-out;
+    /* 1秒かけて伸びる */
+    position: absolute;
+    top: 0;
+}
+
+.is-show .verticalline_logo {
+    height: 120px;
+    /* 最終的な長さ */
+}
+
 /* アバウトミーセクション */
+
+#about_me_pc {
+    display: flex;
+    max-width: 1440px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* くるくる回るテキスト */
+
+.block {
+    /* // 全体の大きさと配置 */
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+
+.circleText {
+    overflow: visible;
+    animation: rotation 25s linear infinite;
+}
+
+.circleText__circle {
+    fill: none;
+}
+
+.circleText__text {
+    fill: #373741;
+    font-size: 17px;
+    letter-spacing: 0.12em;
+}
+
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.block img {
+    width: 420px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.about_me_title {
+    width: 36%;
+}
+
+.about_me_title h2 {
+    text-align: start;
+    font-family: "futura-100-book", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    padding-bottom: 70px;
+}
+
+.about_me_title p {
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    padding-bottom: 88px;
+}
+
+.about_me_text p {
+    font-size: 18px;
+    line-height: 2.5;
+    letter-spacing: 0.12em;
+}
+
+#about_me_sp {
+    display: none;
+}
+
+/* 得意なことセクション */
+#forte {
+    max-width: 1120px;
+    padding: 0 20px;
+    margin: 216px auto 0;
+}
+
+#forte h2 {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    padding-bottom: 88px;
+    text-align: left;
+}
+
+.forte_container {
+    width: 65%;
+    padding-bottom: 146px;
+}
+
+.forte_container h3 {
+    text-align: left;
+    font-size: 22px;
+    line-height: 2.5;
+    letter-spacing: 0.12em;
+    padding-bottom: 50px;
+}
+
+.forte_container p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 2.5;
+    letter-spacing: 0.12em;
+}
+
+
+
+/* SKILLSセクション */
+
+#skills {
+    max-width: 1235px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#skills h2 {
+    text-align: center;
+    padding-bottom: 137px;
+}
+
+.skills_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 120px 20px;
+    /* position: relative; */
+}
+
+#skills img {
+    width: 140px;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+#skills h3 {
+    padding-bottom: 46px;
+    text-align: center;
+    font-family: "futura-100-book", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.075em;
+}
+
+.skills_container p {
+    width: 285px;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+}
+
+/* 縦線のアニメーション */
+
+.inview_verticalLine {
+    width: 2px;
+    height: 432px;
+    position: relative;
+}
+
+.verticalline {
+    width: 2px;
+    height: 0;
+    background-color: #f0b822;
+    transition: height 2s ease-out;
+    /* 1秒かけて伸びる */
+    position: absolute;
+    top: 0;
+}
+
+.is-show .verticalline {
+    height: 432px;
+    /* 最終的な長さ */
+}
+
+/* howa designセクション */
+#howa {
+    max-width: 1120px;
+    margin: 293px auto;
+    padding: 0 20px;
+}
+
+.howa_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.left {
+    width: 490px;
+    font-size: 18px;
+    line-height: 2.5;
+    letter-spacing: 0.12em;
+}
+
+
+.howa_info p {
+    font-size: 18px;
+    line-height: 2.5;
+    letter-spacing: 0.12em;
+}
+
+.howa_info_btn a {
+    margin-top: 38px;
+}
+
+/* ブレイクポイント1 */
+/* ハンバーガーメニューのみになる時 */
+@media screen and (max-width:1023px) {
+
+    .pc_nav {
+        display: none;
+    }
+
+    .header_logo {
+        width: 80px;
+    }
+
+    .intro {
+        margin: 0 auto;
+        padding-top: 160px;
+        padding-bottom: 164px;
+    }
+
+    .intro_ja p {
+        font-size: 18px;
+    }
+
+    .intro_en p {
+        padding-top: 34px;
+        font-size: 14px;
+        font-family: "futura-100-book", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.1em;
+    }
+
+    h2 {
+        font-family: "futura-100", sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .btn {
+        display: block;
+        width: 250px;
+        background: #fff;
+        padding: 23px 0;
+        text-align: center;
+        font-family: "futura-100-book", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 0.1em;
+        border-radius: 32px;
+        border: 1px solid #373741;
+        transition: all .2s
+    }
+
+    /* logoセクション縦並び */
+
+
+    /* アバウトセクション縦並び */
+    #about_me_pc {
+        display: none;
+    }
+
+    #about_me_sp {
+        display: block;
+        flex-direction: column;
+        max-width: 100%;
+        gap: 80px;
+        margin: 0 auto;
+    }
+
+    /* skills縦並び */
+    .skills_container {
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    #skills h2 {
+        text-align: center;
+        padding-bottom: 134px;
+    }
+
+    #skills img {
+        width: 77px;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 36px;
+    }
+
+    #skills h3 {
+        padding-bottom: 19px;
+        text-align: center;
+        font-size: 21px;
+        letter-spacing: 0.1em;
+    }
+
+    .skills_container p {
+        font-size: 14px;
+    }
+
+    .inview_verticalLine {
+        width: 335px;
+        height: 2px;
+        position: relative;
+    }
+
+    .verticalline {
+        width: 0;
+        height: 2px;
+        background-color: #f0b822;
+        transition: width 2s ease-out;
+        /* 1秒かけて伸びる */
+        position: absolute;
+        top: 0;
+    }
+
+    .is-show .verticalline {
+        width: 335px;
+        height: 2px
+            /* 最終的な長さ */
+    }
+
+    .line_anime_pc_service_works {
+        width: 128px;
+        padding-bottom: 10px;
+    }
+
+}
+
+/* ブレイクポイント２ */
+
+@media screen and (max-width:767px) {}

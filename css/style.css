@@ -1,5 +1,15 @@
 @charset "utf-8";
 
+/* フェードイン */
+.fadeIn {
+    opacity: 0;
+    transition: 2.5s;
+}
+
+.fadeIn.is-show {
+    opacity: 1;
+}
+
 /* 背景 */
 body {
     position: relative;
@@ -89,7 +99,7 @@ h2 {
     letter-spacing: 0.1em;
     border-radius: 32px;
     border: 1px solid #373741;
-    transition: all .2s
+    /* transition: all .4s */
 }
 
 .btn:hover {
@@ -132,6 +142,17 @@ h2 {
 
 .lamp_animation {
     width: 50%;
+    position: relative;
+}
+
+.lamp_animation p {
+    writing-mode: vertical-rl;
+    font-size: 28px;
+    letter-spacing: 0.12em;
+    line-height: 2;
+    position: absolute;
+    top: 50%;
+    left: 56%;
 }
 
 /* SERVICEセクション */
@@ -194,23 +215,20 @@ h2 {
     position: relative;
 }
 
-.line {
+.verticalline {
     width: 2px;
     height: 0;
     background-color: #f0b822;
-    transition: height 1s ease-out;
+    transition: height 2s ease-out;
     /* 1秒かけて伸びる */
     position: absolute;
     top: 0;
 }
 
-.line.active {
+.is-show .verticalline {
     height: 432px;
     /* 最終的な長さ */
 }
-
-
-
 
 #SERVICE .btn {
     margin: 0 auto;
@@ -298,12 +316,36 @@ h2 {
     font-weight: 400;
 }
 
-.WORKS_slider_title span {
+/* .WORKS_slider_title span {
     display: block;
     width: 80%;
     height: 2px;
     background: #f0b822;
     border-radius: 2px;
+} */
+
+
+/* 横線のアニメーション */
+
+.inview_horizontalLine {
+    width: 100%;
+    height: 2px;
+    position: relative;
+}
+
+.horizontalline {
+    width: 0;
+    height: 2px;
+    background-color: #f0b822;
+    transition: width 3s ease-out;
+    /* 1秒かけて伸びる */
+    position: absolute;
+    top: 0;
+}
+
+.is-show .horizontalline {
+    width: 100%;
+    /* 最終的な長さ */
 }
 
 /* CONTACTセクション */
@@ -367,37 +409,7 @@ h2 {
     padding: 120px 0;
 }
 
-/* フッター */
 
-#footer {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 20px 0 20px;
-}
-
-.pc_footer_wrap {
-    padding-bottom: 92px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.pc_footer_wrap img {
-    width: 43px;
-}
-
-.pc_footer_wrap p {
-    font-family: "futura-100-book", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.1em;
-}
-
-.sp_footer_wrap,
-.sp_copyright {
-    display: none;
-}
 
 /* slick */
 
@@ -519,7 +531,7 @@ h2 {
         line-height: 2;
         letter-spacing: 0.1em;
         text-align: center;
-        padding-top: 62px;
+        padding: 62px 0 160px 0;
     }
 
     .line_anime_sp_contact {
@@ -551,6 +563,11 @@ h2 {
     .lamp_animation {
         width: 78%;
         margin: 0 auto;
+    }
+
+    /* ランプのところのテキスト */
+    .lamp_animation p {
+        font-size: 16px;
     }
 
     .line_anime_pc_about_service {
@@ -615,9 +632,26 @@ h2 {
         font-size: 14px;
     }
 
-    .line span {
+    .inview_verticalLine {
         width: 335px;
         height: 2px;
+        position: relative;
+    }
+
+    .verticalline {
+        width: 0;
+        height: 2px;
+        background-color: #f0b822;
+        transition: width 2s ease-out;
+        /* 1秒かけて伸びる */
+        position: absolute;
+        top: 0;
+    }
+
+    .is-show .verticalline {
+        width: 335px;
+        height: 2px
+            /* 最終的な長さ */
     }
 
     #SERVICE .btn {
@@ -723,49 +757,4 @@ h2 {
     .next-arrow::after {
         font-size: 16px;
     }
-
-    /* フッターのレスポンシブ */
-    .sp_footer_wrap {
-        max-width: 100%;
-        padding: 198px 20px;
-    }
-
-    .pc_footer_wrap {
-        display: none;
-    }
-
-    .sp_footer_wrap {
-        display: block;
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-    }
-
-    .sp_footer_nav li {
-        font-family: "futura-100-book", sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        font-style: normal;
-        letter-spacing: 0.1em;
-        padding-bottom: 34px;
-    }
-
-    .sp_footer_nav img {
-        width: 29px;
-    }
-
-    .page_top img {
-        width: 110px;
-    }
-
-    .sp_copyright {
-        display: block;
-        text-align: center;
-        padding-bottom: 50px;
-    }
 }
-
-/* 全要素のアウトラインを確認  */
-/* * {
-    outline: 1px solid magenta;
-} */

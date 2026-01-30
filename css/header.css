@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-.header_logo {
+.header_logo img {
     width: 152px;
 }
 
@@ -30,6 +30,14 @@
     font-style: normal;
     letter-spacing: 0.1em;
     text-align: center;
+}
+
+.hoverscale {
+    transition: transform 0.5s;
+}
+
+.hoverscale:hover {
+    transform: scale(1.1);
 }
 
 /* ハンバーガーメニュー */
