@@ -147,12 +147,13 @@ h2 {
 
 .lamp_animation p {
     writing-mode: vertical-rl;
-    font-size: 28px;
+    font-size: clamp(16px, 1vw, 22px);
     letter-spacing: 0.12em;
     line-height: 2;
     position: absolute;
     top: 50%;
-    left: 56%;
+    left: 68%;
+    transform: translateX(-50%);
 }
 
 /* SERVICEセクション */

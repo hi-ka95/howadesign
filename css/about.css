@@ -656,12 +656,18 @@ h3 {
         padding-bottom: 76px;
     }
 
-    /* ここから！ */
-    .logo_box {
+    .logo_box_fuwa {
         display: flex;
         justify-content: flex-end;
         gap: 8px;
         align-items: end;
+    }
+
+    .logo_box_howa {
+        display: flex;
+        justify-content: flex-start;
+        gap: 8px;
+        align-items: baseline;
     }
 
     .logo_box_text {
@@ -672,14 +678,21 @@ h3 {
         transform: rotate(270deg);
     }
 
+    .polyline_left {
+        transform: rotate(90deg);
+    }
+
     .logo_box_text p {
+        writing-mode: vertical-rl;
         font-size: 14px;
         margin: 0 auto;
         padding-top: 5px;
     }
 
     #logo_sp img {
+        display: block;
         width: 228px;
+        margin: 0 auto;
     }
 
     .logo_info p {
