@@ -226,6 +226,43 @@ body {
     opacity: 0.6;
 }
 
+/* 手書きロゴアニメーション */
+
+#text {
+    mask: url(#mask);
+}
+
+.handwriting {
+    width: 100%;
+    height: auto;
+
+    &_text {
+        fill: #f0b822;
+    }
+
+    &_mask {
+        &_line {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 25;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 4000px;
+            animation: handwriting 4s linear infinite;
+        }
+    }
+}
+
+@keyframes handwriting {
+    0% {
+        stroke-dashoffset: 4000px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
 /* ロゴセクション */
 #logo {
     max-width: 1120px;
@@ -656,11 +693,20 @@ h3 {
         padding-bottom: 76px;
     }
 
+    .logo_box_container {
+        width: 228px;
+        margin: 212px auto 212px;
+        position: relative;
+    }
+
     .logo_box_fuwa {
         display: flex;
         justify-content: flex-end;
         gap: 8px;
         align-items: end;
+        position: absolute;
+        left: 50%;
+        top: -110%;
     }
 
     .logo_box_howa {
@@ -668,31 +714,53 @@ h3 {
         justify-content: flex-start;
         gap: 8px;
         align-items: baseline;
+        position: absolute;
+        right: 50%;
+        top: 130%;
     }
 
     .logo_box_text {
-        width: 80px;
+        width: 88px;
     }
 
     .polyline {
         transform: rotate(270deg);
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
     }
 
     .polyline_left {
         transform: rotate(90deg);
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+    }
+
+    .is-show .polyline,
+    .is-show .polyline_left {
+        -webkit-animation: drawing 5s linear forwards;
+        animation: drawing 7s linear forwards;
+    }
+
+    @keyframes drawing {
+        0% {
+            stroke-dashoffset: 2000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
     }
 
     .logo_box_text p {
         writing-mode: vertical-rl;
         font-size: 14px;
         margin: 0 auto;
-        padding-top: 5px;
+        padding: 8px 0;
     }
 
     #logo_sp img {
         display: block;
-        width: 228px;
-        margin: 0 auto;
+
     }
 
     .logo_info p {
