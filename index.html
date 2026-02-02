@@ -74,6 +74,34 @@
         </div>
     </header>
 
+    <!-- 固定ヘッダー -->
+    <div id="fixed-header">
+        <div class="fixed-header_wrap">
+            <h1 class="fixed-header_logo">
+                <a href="#header">
+                    <img src="./images/header_logo.svg" alt="howa_design_logo" class="hoverscale">
+                </a>
+            </h1>
+            <div class="fixed-sp_btn hoverscale">
+                <p>CLOSE</p>
+                <span></span>
+            </div>
+            <div class="fixed-sp_nav">
+                <div class="fixed-sp_nav_menu">
+                    <ul>
+                        <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                        <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                        <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                        <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
+                    </ul>
+                    <p>ふわっとしたイメージ<br>
+                        ほわっと形に。</p>
+                    <a class="fixed-contact_btn hoverscale" href="#CONTACT">お問い合わせフォーム</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main>
         <!-- 冒頭 -->
         <div class="intro inview_re fadeIn">
@@ -462,6 +490,32 @@
                     $(this).stop().addClass("is-show");
                 }
             });
+
+            (function () {
+                const fh = document.getElementById('fixed-header');
+                const isUp = (function () {
+                    const scrollElement = document.scrollingElement;
+                    let flag, prePoint, scrollPoint;
+                    return function () {
+                        scrollPoint = scrollElement.scrollTop;
+                        flag = prePoint > scrollPoint ? true : false;
+                        prePoint = scrollPoint;
+                        return flag;
+                    }
+                }());
+
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 500) {
+                        if (isUp()) {
+                            fh.classList.remove('is-show');
+                        } else {
+                            fh.classList.add('is-show')
+                        }
+                    } else {
+                        fh.classList.remove('is-show');
+                    }
+                })
+            }());
         });
 
         $(".inview_re").on("inview", function (event, isInView) {

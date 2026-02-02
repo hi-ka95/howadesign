@@ -4,12 +4,12 @@
 
 #footer {
     max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 20px 0 20px;
+    margin: 255px auto 92px;
+    padding: 0 20px;
 }
 
 .pc_footer_wrap {
-    padding-bottom: 92px;
+    /* padding-bottom: 92px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,9 +35,10 @@
 @media screen and (max-width:767px) {
 
     /* フッターのレスポンシブ */
-    .sp_footer_wrap {
+    #footer {
         max-width: 100%;
-        padding: 198px 20px;
+        margin-top: 160px;
+        margin-bottom: 50px;
     }
 
     .pc_footer_wrap {
@@ -71,6 +72,6 @@
     .sp_copyright {
         display: block;
         text-align: center;
-        padding-bottom: 50px;
+        padding: 50px 0;
     }
 }

@@ -235,27 +235,27 @@ body {
 .handwriting {
     width: 100%;
     height: auto;
-
-    &_text {
-        fill: #f0b822;
-    }
-
-    &_mask {
-        &_line {
-            fill: none;
-            stroke: #fff;
-            stroke-width: 25;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-dasharray: 4000px;
-            animation: handwriting 4s linear infinite;
-        }
-    }
 }
+
+.handwriting_text {
+    fill: #f0b822;
+}
+
+
+.handwriting_mask_line {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 4000px;
+    animation: handwriting 4s linear infinite;
+}
+
 
 @keyframes handwriting {
     0% {
-        stroke-dashoffset: 4000px;
+        stroke-dashoffset: 2000px;
     }
 
     100% {
@@ -401,6 +401,8 @@ h3 {
     max-width: 1440px;
     justify-content: space-between;
     margin: 0 auto;
+    padding: 0 20px;
+    align-items: center;
 }
 
 /* くるくる回るテキスト */
@@ -409,7 +411,6 @@ h3 {
     /* // 全体の大きさと配置 */
     width: 500px;
     height: 500px;
-    margin: auto;
     position: relative;
     top: 0;
     left: 0;
@@ -450,20 +451,17 @@ h3 {
 }
 
 .about_me_title {
-    width: 36%;
+    width: 40%;
 }
 
 .about_me_title h2 {
     text-align: start;
-    font-family: "futura-100-book", sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    font-style: normal;
     letter-spacing: 0.1em;
     padding-bottom: 70px;
 }
 
-.about_me_title p {
+.about_me_title h3 {
+    text-align: left;
     font-size: 22px;
     letter-spacing: 0.1em;
     padding-bottom: 88px;
@@ -594,21 +592,25 @@ h3 {
 }
 
 .howa_info {
+    width: 70%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 30px 0;
 }
 
-.left {
-    width: 490px;
+.right {
+    width: 370px;
     font-size: 18px;
     line-height: 2.5;
     letter-spacing: 0.12em;
+    text-align: left;
 }
 
 
-.howa_info p {
+.left {
+    padding-left: 30px;
     font-size: 18px;
     line-height: 2.5;
     letter-spacing: 0.12em;
@@ -616,6 +618,17 @@ h3 {
 
 .howa_info_btn a {
     margin-top: 38px;
+}
+
+.howa_info_btn {
+    width: 100%;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.howa_info_btn a {
+    margin: 0 auto;
+    margin-top: 64px;
 }
 
 /* ブレイクポイント1 */
@@ -651,8 +664,12 @@ h3 {
 
     h2 {
         font-family: "futura-100", sans-serif;
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 500;
+    }
+
+    h3 {
+        font-size: 24px;
     }
 
     .btn {
@@ -684,11 +701,11 @@ h3 {
         padding: 0 20px;
     }
 
-    h2 {
+    #logo h2 {
         padding-bottom: 48px;
     }
 
-    h3 {
+    #logo h3 {
         font-size: 20px;
         padding-bottom: 76px;
     }
@@ -851,16 +868,83 @@ h3 {
 
     #about_me_sp {
         display: block;
-        flex-direction: column;
         max-width: 100%;
-        gap: 80px;
+        padding: 0 20px;
+    }
+
+    .about_me_title {
+        width: 100%;
+    }
+
+    .about_me_title h2 {
+        text-align: center;
+        padding-bottom: 64px;
+    }
+
+    .about_me_title h3 {
+        text-align: center;
+        padding-bottom: 128px;
+    }
+
+    .about_me_text {
+        width: 610px;
         margin: 0 auto;
     }
 
+    .about_me_text p {
+        font-size: 16px;
+    }
+
+    .block {
+        margin: 0 auto;
+        padding-bottom: 80px;
+    }
+
+    .circleText__text {
+        font-size: 14px;
+    }
+
+    /* 強み */
+
+    #forte {
+        max-width: 100%;
+        margin: 184px auto 0;
+    }
+
+    #forte h2 {
+        font-size: 26px;
+        padding-bottom: 78px;
+        text-align: center;
+    }
+
+    .forte_container {
+        width: 610px;
+        padding-bottom: 92px;
+        margin: 0 auto;
+    }
+
+    .forte_container h3 {
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 43px;
+    }
+
+    .forte_container p {
+        font-size: 16px;
+    }
+
     /* skills縦並び */
+
+    #skills {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 92px;
+    }
+
     .skills_container {
         flex-direction: column;
         gap: 64px;
+        padding: 0 20px 184px 20px;
     }
 
     #skills h2 {
@@ -878,7 +962,6 @@ h3 {
     #skills h3 {
         padding-bottom: 19px;
         text-align: center;
-        font-size: 21px;
         letter-spacing: 0.1em;
     }
 
@@ -913,8 +996,164 @@ h3 {
         padding-bottom: 10px;
     }
 
+    /* howa インフォ */
+
+    #howa {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .howa_info {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .right {
+        font-size: 16px;
+    }
+
+
+    .left {
+        font-size: 16px;
+    }
+
 }
+
 
 /* ブレイクポイント２ */
 
-@media screen and (max-width:767px) {}
+@media screen and (max-width:767px) {
+
+    h2 {
+        font-family: "futura-100", sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .logo_box_text {
+        width: 60px;
+    }
+
+    .logo_box_text p {
+        writing-mode: vertical-rl;
+        font-size: 14px;
+        margin: 0 auto;
+        padding: 8px 0;
+    }
+
+    #logo_sp img {
+        display: block;
+
+    }
+
+    .logo_info p {
+        font-size: 14px;
+        line-height: 2.5;
+        letter-spacing: 0.12em;
+        text-align: center;
+        padding-top: 45px;
+    }
+
+    .circle {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #fff;
+        text-align: center;
+        line-height: 60px;
+        font-size: 16px;
+        letter-spacing: 0.12em;
+        cursor: none;
+    }
+
+    .block {
+        /* // 全体の大きさと配置 */
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding-bottom: 80px;
+    }
+
+    .circleText__text {
+        font-size: 13px;
+        letter-spacing: 0.1em;
+    }
+
+    .block img {
+        width: 253px;
+        position: absolute;
+        top: 13px;
+        left: 13px;
+    }
+
+    .about_me_text {
+        width: 100%;
+    }
+
+    .about_me_text p {
+        font-size: 14px;
+    }
+
+    /* 強み */
+    #forte h2 {
+        font-size: 20px;
+    }
+
+    .forte_container {
+        width: 100%;
+    }
+
+    .forte_container h3 {
+        text-align: center;
+        font-size: 14px;
+        line-height: 2.5;
+        letter-spacing: 0.1em;
+        padding-bottom: 43px;
+        font-weight: 600;
+    }
+
+    .forte_container p {
+        font-size: 14px;
+    }
+
+    /* ホワ */
+    .howa_info {
+        width: 100%;
+        padding: 11px 0;
+    }
+
+    .right {
+        width: 60%;
+        font-size: 14px;
+    }
+
+
+    .left {
+        font-size: 14px;
+        padding-left: 0;
+    }
+
+    .howa_info_btn a {
+        margin-top: 22px;
+    }
+
+    .howa_info_btn {
+        width: 100%;
+        text-align: center;
+        padding: 64px 0 0 0;
+    }
+
+    .howa_info_btn a {
+        margin: 0 auto;
+        margin-top: 48px;
+    }
+}
