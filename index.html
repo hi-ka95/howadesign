@@ -73,21 +73,20 @@
             </div>
         </div>
     </header>
-
     <!-- 固定ヘッダー -->
     <div id="fixed-header">
-        <div class="fixed-header_wrap">
-            <h1 class="fixed-header_logo">
+        <div class="header_wrap">
+            <h1 class="header_logo">
                 <a href="#header">
                     <img src="./images/header_logo.svg" alt="howa_design_logo" class="hoverscale">
                 </a>
             </h1>
-            <div class="fixed-sp_btn hoverscale">
+            <div class="sp_btn hoverscale">
                 <p>CLOSE</p>
                 <span></span>
             </div>
-            <div class="fixed-sp_nav">
-                <div class="fixed-sp_nav_menu">
+            <div class="sp_nav">
+                <div class="sp_nav_menu">
                     <ul>
                         <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
                         <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
@@ -96,7 +95,7 @@
                     </ul>
                     <p>ふわっとしたイメージ<br>
                         ほわっと形に。</p>
-                    <a class="fixed-contact_btn hoverscale" href="#CONTACT">お問い合わせフォーム</a>
+                    <a class="contact_btn hoverscale" href="#CONTACT">お問い合わせフォーム</a>
                 </div>
             </div>
         </div>
@@ -505,7 +504,7 @@
                 }());
 
                 window.addEventListener('scroll', () => {
-                    if (window.pageYOffset > 500) {
+                    if (window.pageYOffset > 200) {
                         if (isUp()) {
                             fh.classList.remove('is-show');
                         } else {
