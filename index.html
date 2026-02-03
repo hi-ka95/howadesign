@@ -430,12 +430,30 @@
 
     <script>
         $(function () {
-            $('.sp_btn').on('click', function () {
-                $('.sp_btn').toggleClass('open');
-                $('.sp_nav').fadeToggle();
+            $('#header .sp_btn').on('click', function () {
+                $('#header .sp_btn').toggleClass('open');
+                $('#header .sp_nav').fadeToggle();
+            })
+            $('#fixed-header .sp_btn').on('click', function () {
+                $('#fixed-header .sp_btn').toggleClass('open');
+                $('#fixed-header .sp_nav').fadeToggle();
             })
 
+            $(".sp_btn").click(function () {
 
+                // 現在のbodyタグのoverflowスタイルを確認
+                if ($("body").css("overflow") === "hidden") {
+
+                    // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                    $("body").css({ height: "", overflow: "" });
+
+                } else {
+
+                    // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+                    $("body").css({ height: "100%", overflow: "hidden" });
+
+                }
+            });
             $('.slider_web').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,

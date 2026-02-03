@@ -13,6 +13,8 @@
 /* 背景 */
 body {
     position: relative;
+
+
 }
 
 .bg {
@@ -532,7 +534,7 @@ h2 {
         line-height: 2;
         letter-spacing: 0.1em;
         text-align: center;
-        padding: 62px 0 160px 0;
+        padding-top: 62px;
     }
 
     .line_anime_sp_contact {

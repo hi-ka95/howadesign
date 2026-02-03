@@ -48,7 +48,6 @@
 .sp_btn {
     height: 11px;
     cursor: pointer;
-    position: relative;
     z-index: 2;
 }
 
