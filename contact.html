@@ -84,34 +84,60 @@
                 <p class="text">丁寧なヒアリングで本質を引き出し、整理し、提案いたします。<br>業務委託も受け付けております。</p>
             </div>
 
-            <form class="c-form">
+            <form class="c-form"
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdjIl0W7vxVhp0Gz8QLODvOcp6RvajbZQ9UT2jqfWDURkJRRg/formResponse"
+                method="POST" target="hidden_iframe" onsubmit="submitted=true;">
                 <div class="c-form__item">
                     <label class="c-form__label" for="field-name">お名前<span class="c-form__required">必須</span></label>
-                    <input class="c-form__input" id="field-name" placeholder="株式会社 山田" type="text"
-                        required="required" />
+                    <input class="c-form__input" name="entry.348808956" id="field-name" placeholder="株式会社 山田"
+                        type="text" required="required" />
                 </div>
                 <div class="c-form__item">
                     <label class="c-form__label" for="field-mail">メールアドレス<span
                             class="c-form__required">必須</span></label>
-                    <input class="c-form__input" id="field-mail" placeholder="sample@gmail.com" type="email"
-                        required="required" />
+                    <input class="c-form__input" name="entry.1723002248" id="field-mail" placeholder="sample@gmail.com"
+                        type="email" required="required" />
                 </div>
                 <div class="c-form__item">
                     <label class="c-form__label" for="field-category">ご相談カテゴリ<span
                             class="c-form__required">必須</span></label>
-                    <select class="c-form__select" id="field-category" placeholder="▼"></select>
+                    <select class="c-form__select" id="field-category" placeholder="▼">
+                        <option value="1.制作のご依頼">1.制作のご依頼</option>
+                        <option value="2.納期・スケジュールのご相談">2.納期・スケジュールのご相談</option>
+                        <option value="3.お見積もり">3.お見積もり</option>
+                        <option value="4.プランのご相談">4.プランのご相談</option>
+                        <option value="5.業務委託">5.業務委託</option>
+                        <option value="6.その他">6.その他</option>
+                    </select>
+                    <input type="hidden" name="entry.1240215151" class="category">
                 </div>
                 <div class="c-form__item">
                     <label class="c-form__label" for="field-huwa">ふわっと度</label>
-                    <select class="c-form__select" id="field-huwa" placeholder="▼"></select>
+                    <select class="c-form__select" id="field-huwa" placeholder="▼">
+                        <option value="１ 結構明確。">１ 結構明確。</option>
+                        <option value="２ まぁまぁ明確。">２ まぁまぁ明確。</option>
+                        <option value="３ ふわっとしてるところもあれば明確なところもあり。">３ ふわっとしてるところもあれば明確なところもあり。</option>
+                        <option value="４ 大枠は決まってるけど他はふわっと。">４ 大枠は決まってるけど他はふわっと。</option>
+                        <option value="５ 結構ふわっと。とりあえず相談、聞いてみたい">５ 結構ふわっと。とりあえず相談、聞いてみたい</option>
+                    </select>
+                    <input type="hidden" name="entry.1209816417" class="huwado">
                 </div>
                 <div class="c-form__item">
                     <label class="c-form__label" for="field-message">お問い合わせ内容</label>
-                    <textarea class="c-form__input" id="field-message" placeholder="お問い合わせ内容をご自由にご記入ください"></textarea>
+                    <textarea class="c-form__input" id="field-message" name="entry.505950497"
+                        placeholder="お問い合わせ内容をご自由にご記入ください"></textarea>
                 </div>
                 <div class="c-form__item">
                     <label class="c-form__label" for="field-chance">howa designを知ったきっかけ</label>
-                    <select class="c-form__select" id="field-chance" placeholder="▼"></select>
+                    <select class="c-form__select" id="field-chance" placeholder="▼">
+                        <option value="1.SNS">1.SNS</option>
+                        <option value="2.ご紹介">2.ご紹介</option>
+                        <option value="3.WEB">3.WEB</option>
+                        <option value="4.広告">4.広告</option>
+                        <option value="5.その他">5.その他</option>
+                    </select>
+                    <input type="hidden" name="entry.
+                    1109042003" class="know">
                 </div>
                 <div class="c-form__submit">
                     <button type="submit">送信</button>
@@ -161,8 +187,25 @@
             </div>
         </footer>
     </main>
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location='./thanks.html';}"></iframe>
     <script>
         $(function () {
+            $('#field-category').change(function () {
+                let category = $('#field-category').val()
+                $('.category').val(category)
+            })
+            $('#field-huwa').change(function () {
+                let huwado = $('#field-huwa').val()
+                $('.huwado').val(huwado)
+            })
+            $('#field-chance').change(function () {
+                let know = $('#field-chance').val()
+                $('.know').val(know)
+            })
             $('#header .sp_btn').on('click', function () {
                 $('#header .sp_btn').toggleClass('open');
                 $('#header .sp_nav').fadeToggle();
