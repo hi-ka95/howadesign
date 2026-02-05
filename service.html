@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICE</title>
+
+    <!-- slick CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/service.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <!-- jQueryCDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- slick js CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- フォント -->
+    <link rel="stylesheet" href="https://use.typekit.net/kdj8amb.css">
+    <!-- inview.js -->
+    <script src="./jquery.inview.min.js"></script>
+
+    <!-- jsDelivr cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+</head>
+
+<body>
+    <!-- マウスポインター -->
+    <div class="stalker" id="js-stalker"></div>
+    <!-- 背景 -->
+    <div class="bg">
+        <video src="./images/bg 11.40.28.mp4" class="bg_video" autoplay loop muted playsinline
+            poster="./images/bg.jpg"></video>
+    </div>
+    <!-- ヘッダー -->
+    <header id="header">
+        <div class="header_wrap">
+            <h1 class="header_logo">
+                <a href="#header">
+                    <img src="./images/header_logo.svg" alt="howa_design_logo" class="hoverscale">
+                </a>
+            </h1>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                    <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                    <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                    <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn hoverscale">
+                <p>CLOSE</p>
+                <span></span>
+            </div>
+            <div class="sp_nav">
+                <div class="sp_nav_menu">
+                    <ul>
+                        <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                        <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                        <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                        <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
+                    </ul>
+                    <p>ふわっとしたイメージ<br>
+                        ほわっと形に。</p>
+                    <a class="contact_btn hoverscale" href="#CONTACT">お問い合わせフォーム</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 固定ヘッダー -->
+    <div id="fixed-header">
+        <div class="header_wrap">
+            <h1 class="header_logo">
+                <a href="#header">
+                    <img src="./images/header_logo.svg" alt="howa_design_logo" class="hoverscale">
+                </a>
+            </h1>
+            <div class="sp_btn hoverscale">
+                <p>CLOSE</p>
+                <span></span>
+            </div>
+            <div class="sp_nav">
+                <div class="sp_nav_menu">
+                    <ul>
+                        <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                        <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                        <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                        <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
+                    </ul>
+                    <p>ふわっとしたイメージ<br>
+                        ほわっと形に。</p>
+                    <a class="contact_btn hoverscale" href="#CONTACT">お問い合わせフォーム</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="intro">
+        <h2>SERVICE&PRICE</h2>
+        <p class="title">
+            掲載している制作費用・制作期間はあくまでも目安です。<br>まずはお気軽にお問い合わせください。
+        </p>
+        <div class="btn_box">
+            <a class="btn hoverscale" href="#graphic">GRAPHIC DESIGN</a>
+            <a class="btn hoverscale" href="#web">WEB DESIGN</a>
+            <a class="btn hoverscale" href="#pers">PERSPECTIVE DRAWING</a>
+        </div>
+    </section>
+
+    <section id="graphic">
+        <h2>GRAPHIC DESIGN</h2>
+        <h3>紙もの</h3>
+        <div class="category_container">
+            <div class="category">
+                <img src="./images/Graphic.svg" alt="チラシ・フライヤー">
+                <h3>チラシ・フライヤー</h3>
+                <div class="price">
+                    <img src="./images/price.svg" alt="価格">
+                    <p>片面/¥12,000〜　両面/¥20,000〜</p>
+                </div>
+                <div class="time">
+                    <img src="./images/time.svg" alt="制作期間">
+                    <p>１週間〜２週間</p>
+                </div>
+                <div class="category_text">
+                    <p>その他サイズのものや、ハガキ・ポスターも制作します。内容により価格は増減いたしますので、お話をお伺いした後にお見積もりを作成いたします。</p>
+                </div>
+            </div>
+            <!-- 縦線のアニメーション -->
+            <div class="inview inview_verticalline">
+                <div class="verticalline"></div>
+            </div>
+
+
+            <div class="category">
+                <img src="./images/Web.svg" alt="ロゴ制作">
+                <h3>ロゴ制作</h3>
+                <div class="price">
+                    <img src="./images/price.svg" alt="価格">
+                    <p>¥50,000〜</p>
+                </div>
+                <div class="time">
+                    <img src="./images/time.svg" alt="制作期間">
+                    <p>３週間〜４週間</p>
+                </div>
+                <div class="category_text">
+                    <p>お客様がロゴデータを受け取った後も、さまざまな場面でお使いいただくことを想定し、aiデータも料金内でお渡しします。<br><br></p>
+                </div>
+            </div>
+
+            <div class="inview inview_verticalline">
+                <div class="verticalline"></div>
+            </div>
+            <div class="category">
+                <img src="./images/Pers.svg" alt="名刺・ショップカード制作">
+                <h3>名刺・ショップカード制作</h3>
+                <div class="price">
+                    <img src="./images/price.svg" alt="価格">
+                    <p>片面/¥12,000〜　両面/¥20,000〜</p>
+                </div>
+                <div class="time">
+                    <img src="./images/time.svg" alt="制作期間">
+                    <p>２週間〜３週間</p>
+                </div>
+                <div class="category_text">
+                    <p>ロゴ制作とあわせてご依頼いただくのもおすすめです。※印刷代は含まれておりません。印刷代行も承ります。<br><br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="web_sns">
+        <h3 class="h3">WEB画像・SNSデザイン</h3>
+        <div class="category_container">
+            <div class="category">
+                <img src="./images/Graphic.svg" alt="バナー制作">
+                <h3>バナー制作</h3>
+                <div class="price">
+                    <img src="./images/price.svg" alt="価格">
+                    <p>¥3,000〜</p>
+                </div>
+                <div class="time">
+                    <img src="./images/time.svg" alt="制作期間">
+                    <p>１週間〜</p>
+                </div>
+                <div class="category_text">
+                    <p>サイズにより価格は変動します。
+                        キャッチコピーなど、コピーライティングも対応可能です。（別途追加料金が必要です）</p>
+                </div>
+            </div>
+            <!-- 縦線のアニメーション -->
+            <div class="inview inview_verticalline">
+                <div class="verticalline"></div>
+            </div>
+
+
+            <div class="category">
+                <img src="./images/Web.svg" alt="インスタグラム投稿デザイン">
+                <h3>インスタグラム投稿デザイン</h3>
+                <div class="price">
+                    <img src="./images/price.svg" alt="価格">
+                    <p>¥3,000〜</p>
+                </div>
+                <div class="time">
+                    <img src="./images/time.svg" alt="制作期間">
+                    <p>１週間〜</p>
+                </div>
+                <div class="category_text">
+                    <p>統一感のある投稿デザインを制作し、アカウントの世界観を構築します。ご自身で編集しやすいテンプレートも制作可能です。</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn_box">
+            <a class="btn hoverscale" href="./index.html#WORKS">制作事例</a>
+        </div>
+    </section>
+
+    <section id="web">
+        <h2>WEB DESIGN</h2>
+        <h3>デザイン・コーディング・実装までおまかせください</h3>
+        <div class="category_container">
+            <div class="category">
+                <img src="./images/Graphic.svg" alt="WEBデザイン　１ページ構成">
+                <h3>WEBデザイン　１ページ構成</h3>
+                <div class="price">
+                    <img src="./images/price.svg" alt="価格">
+                    <p>¥120,000〜</p>
+                </div>
+                <div class="time">
+                    <img src="./images/time.svg" alt="制作期間">
+                    <p>１ヶ月〜</p>
+                </div>
+                <div class="category_text">
+                    <p>世界観・ブランドイメージ・必要な情報を丁寧に一枚にまとめたWEBサイトをお作りします。※別途ドメイン・サーバー費が必要です。</p>
+                </div>
+            </div>
+            <!-- 縦線のアニメーション -->
+            <div class="inview inview_verticalline">
+                <div class="verticalline"></div>
+            </div>
+            <div class="category">
+                <img src="./images/Web.svg" alt="WEBデザイン　複数ページ構成">
+                <h3>WEBデザイン　複数ページ構成</h3>
+                <div class="price">
+                    <img src="./images/price.svg" alt="価格">
+                    <p>￥120,000+¥50,000/p〜</p>
+                </div>
+                <div class="time">
+                    <img src="./images/time.svg" alt="制作期間">
+                    <p>２ヶ月半〜</p>
+                </div>
+                <div class="category_text">
+                    <p>１ページでは伝えきれない想いを丁寧に複数ページにまとめたWEBサイトをお作りします。（TOP+下層ページ）※別途ドメイン・サーバー費が必要です</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="option">
+            <h3>追加オプション</h3>
+            <div class="category_container">
+                <div class="category">
+                    <h3>素材制作</h3>
+                    <div class="price">
+                        <img src="./images/price.svg" alt="価格">
+                        <p>¥10,000〜</p>
+                    </div>
+                    <div class="category_text">
+                        <p>写真・イラスト・図解などのオリジナル素材を作成します。<br><br></p>
+                    </div>
+                </div>
+                <!-- 縦線のアニメーション -->
+                <div class="inview inview_verticalline_option">
+                    <div class="verticalline_option"></div>
+                </div>
+                <div class="category">
+                    <h3>ライティング</h3>
+                    <div class="price">
+                        <img src="./images/price.svg" alt="価格">
+                        <p>¥10,000〜</p>
+                    </div>
+                    <div class="category_text">
+                        <p>ヒアリング内容を下に、ページ全体の構成と文章をこちらで執筆します。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_box">
+                <a class="btn hoverscale" href="./index.html#WORKS">制作事例</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pers">
+        <h2>PERSPECTIVE DRAWING</h2>
+        <div class="category_container">
+            <div class="category">
+                <img src="./images/Graphic.svg" alt="手書き内装パース">
+                <h3>手書き内装パース</h3>
+                <div class="price">
+                    <img src="./images/price.svg" alt="価格">
+                    <p>白黒/¥15,000〜 カラー/¥20,000〜</p>
+                </div>
+                <div class="time">
+                    <img src="./images/time.svg" alt="制作期間">
+                    <p>３週間〜</p>
+                </div>
+            </div>
+            <!-- 縦線のアニメーション -->
+            <div class="inview inview_verticalline_pers">
+                <div class="verticalline_pers"></div>
+            </div>
+            <div class="category">
+                <div class="category_text_pers">
+                    <p>各図面をお送りいただければ、手書き内装パースを制作いたします。図面からでは伝わりにくい内装イメージは、パースが１カットあるだけでもしっかりお客様へ伝わる有効なツールです。手書きなのでCGとは違う温かみを感じていただけます。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="btn_box_last">
+            <a class="btn hoverscale" href="./index.html#WORKS">制作事例</a>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="pc_footer_wrap">
+            <a href="" class="hoverscale">
+                <img src="./images/instagram.svg" alt="インスタグラムロゴ">
+            </a>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                    <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                    <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                    <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
+                </ul>
+            </nav>
+            <p>© 2026 howa design.</p>
+        </div>
+
+        <div class="sp_footer_wrap">
+            <nav class="sp_footer_nav">
+                <ul>
+                    <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                    <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                    <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                    <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
+                </ul>
+                <a href="" class="hoverscale">
+                    <img src="./images/instagram.svg" alt="インスタグラムロゴ">
+                </a>
+            </nav>
+            <div class="page_top">
+                <a href="#header" class="hoverscale">
+                    <img src="./images/return_top_btn.svg" alt="トップへ戻る">
+                </a>
+            </div>
+        </div>
+        <div class="sp_copyright">
+            <p>© 2026 howa design.</p>
+        </div>
+    </footer>
+
+    <script>
+        $(function () {
+            $('#header .sp_btn').on('click', function () {
+                $('#header .sp_btn').toggleClass('open');
+                $('#header .sp_nav').fadeToggle();
+            })
+            $('#fixed-header .sp_btn').on('click', function () {
+                $('#fixed-header .sp_btn').toggleClass('open');
+                $('#fixed-header .sp_nav').fadeToggle();
+            })
+
+            $(".sp_btn").click(function () {
+
+                // 現在のbodyタグのoverflowスタイルを確認
+                if ($("body").css("overflow") === "hidden") {
+
+                    // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                    $("body").css({ height: "", overflow: "" });
+
+                } else {
+
+                    // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+                    $("body").css({ height: "100%", overflow: "hidden" });
+
+                }
+            });
+
+            $(".inview").on("inview", function (event, isInView) {
+                if (isInView) {
+                    $(this).stop().addClass("is-show");
+                }
+            });
+
+            (function () {
+                const fh = document.getElementById('fixed-header');
+                const isUp = (function () {
+                    const scrollElement = document.scrollingElement;
+                    let flag, prePoint, scrollPoint;
+                    return function () {
+                        scrollPoint = scrollElement.scrollTop;
+                        flag = prePoint > scrollPoint ? true : false;
+                        prePoint = scrollPoint;
+                        return flag;
+                    }
+                }());
+
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 200) {
+                        if (isUp()) {
+                            fh.classList.remove('is-show');
+                        } else {
+                            fh.classList.add('is-show')
+                        }
+                    } else {
+                        fh.classList.remove('is-show');
+                    }
+                })
+            }());
+        });
+
+        $(".inview_re").on("inview", function (event, isInView) {
+            if (isInView) {
+                $(this).stop().addClass("is-show");
+            } else {
+                $(this).stop().removeClass("is-show");
+            }
+        });
+        $(function () {
+            const stalker = $("#js-stalker");
+            $(document).on("mousemove", function (e) {
+                // マウスの座標を取得
+                const x = e.clientX;
+                const y = e.clientY;
+                // ストーカーの位置を更新
+                stalker.css({
+                    opacity: 1, // カーソルが画面内に入ったら不透明にする
+                    transform: "translate(" + x + "px, " + y + "px)", // マウスの座標に移動
+                });
+            });
+            $("a").on({
+                mouseenter: function () {
+                    stalker.addClass("js-hover"); // リンクにカーソルが乗ったときに拡大するクラスを追加
+                },
+                mouseleave: function () {
+                    stalker.removeClass("js-hover"); // リンクからカーソルが離れたときに拡大するクラスを削除
+                },
+            });
+        }); 
+    </script>
+</body>
+
+</html>

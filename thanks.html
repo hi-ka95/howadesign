@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks Page</title>
+    <!-- slick CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/thanks.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <!-- jQueryCDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- slick js CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- フォント -->
+    <link rel="stylesheet" href="https://use.typekit.net/kdj8amb.css">
+
+
+    <!-- jsDelivr cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+
+</head>
+
+<body>
+    <!-- マウスポインター -->
+    <div class="stalker" id="js-stalker"></div>
+    <!-- 背景 -->
+    <div class="bg">
+        <video src="./images/bg 11.40.28.mp4" class="bg_video" autoplay loop muted playsinline
+            poster="./images/bg.jpg"></video>
+    </div>
+    <!-- ヘッダー -->
+    <header id="header">
+        <div class="header_wrap">
+            <h1 class="header_logo">
+                <a href="#header">
+                    <img src="./images/header_logo.svg" alt="howa_design_logo" class="hoverscale">
+                </a>
+            </h1>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                    <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                    <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                    <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn hoverscale">
+                <p>CLOSE</p>
+                <span></span>
+            </div>
+            <div class="sp_nav">
+                <div class="sp_nav_menu">
+                    <ul>
+                        <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                        <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                        <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                        <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
+                    </ul>
+                    <p>ふわっとしたイメージ<br>
+                        ほわっと形に。</p>
+                    <a class="contact_btn hoverscale" href="#CONTACT">お問い合わせフォーム</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2>THANK YOU</h2>
+        <p class="thanks">
+            お問い合わせありがとうございます
+        </p>
+        <p class="text">
+            平日17時以降にいただいたメールは、翌営業日に返信したします<br>※土日祝日を除く
+        </p>
+        <a class="btn hoverscale" href="./index.html">トップへ戻る</a>
+    </main>
+    <footer id="footer">
+        <div class="pc_footer_wrap">
+            <a href="" class="hoverscale">
+                <img src="./images/instagram.svg" alt="インスタグラムロゴ">
+            </a>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                    <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                    <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                    <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
+                </ul>
+            </nav>
+            <p>© 2026 howa design.</p>
+        </div>
+
+        <div class="sp_footer_wrap">
+            <nav class="sp_footer_nav">
+                <ul>
+                    <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
+                    <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
+                    <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                    <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
+                </ul>
+                <a href="" class="hoverscale">
+                    <img src="./images/instagram.svg" alt="インスタグラムロゴ">
+                </a>
+            </nav>
+            <div class="page_top">
+                <a href="#header" class="hoverscale">
+                    <img src="./images/return_top_btn.svg" alt="トップへ戻る">
+                </a>
+            </div>
+        </div>
+        <div class="sp_copyright">
+            <p>© 2026 howa design.</p>
+        </div>
+    </footer>
+    <script>
+        $(function () {
+            $('#header .sp_btn').on('click', function () {
+                $('#header .sp_btn').toggleClass('open');
+                $('#header .sp_nav').fadeToggle();
+            })
+            $('#fixed-header .sp_btn').on('click', function () {
+                $('#fixed-header .sp_btn').toggleClass('open');
+                $('#fixed-header .sp_nav').fadeToggle();
+            })
+        });
+        $(".sp_btn").click(function () {
+
+            // 現在のbodyタグのoverflowスタイルを確認
+            if ($("body").css("overflow") === "hidden") {
+
+                // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                $("body").css({ height: "", overflow: "" });
+
+            } else {
+
+                // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+                $("body").css({ height: "100%", overflow: "hidden" });
+
+            }
+        });
+        $(function () {
+            const stalker = $("#js-stalker");
+            $(document).on("mousemove", function (e) {
+                // マウスの座標を取得
+                const x = e.clientX;
+                const y = e.clientY;
+                // ストーカーの位置を更新
+                stalker.css({
+                    opacity: 1, // カーソルが画面内に入ったら不透明にする
+                    transform: "translate(" + x + "px, " + y + "px)", // マウスの座標に移動
+                });
+            });
+            $("a").on({
+                mouseenter: function () {
+                    stalker.addClass("js-hover"); // リンクにカーソルが乗ったときに拡大するクラスを追加
+                },
+                mouseleave: function () {
+                    stalker.removeClass("js-hover"); // リンクからカーソルが離れたときに拡大するクラスを削除
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>

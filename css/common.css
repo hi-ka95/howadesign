@@ -1,1 +1,59 @@
 @charset "utf-8";
+
+/* マウスストーカーのスタイル */
+.stalker {
+    background-color: #f0b822;
+    /* 背景色 */
+    border-radius: 50%;
+    /* 正円 */
+    height: 15px;
+    /* 円の高さ */
+    left: -7.5px;
+    /* widthの半分 */
+    opacity: 0;
+    /* カーソルを画面内に入れるまでは透明 */
+    pointer-events: none;
+    /* 直下のリンクをクリック可能にする */
+    position: fixed;
+    /* スクロールしてもカーソルの位置で固定 */
+    top: -15px;
+    /* widthの半分 */
+    transition: transform .3s ease-out;
+    /* 遅れてついてくる時間 */
+    width: 15px;
+    /* 円の幅 */
+    z-index: 999;
+    /* 一番上に来るように */
+}
+
+/* リンクにホバーした時のスタイル */
+.stalker.js-hover {
+    --sample-color: 240 184 34;
+    background: radial-gradient(circle,
+            rgb(var(--sample-color)),
+            rgb(var(--sample-color) / 0%));
+    /* background-color: rgba(255, 99, 71, .5); */
+    /* カーソルがリンク上に乗ったときの背景色 */
+    height: 100px;
+    /* カーソルがリンク上に乗ったときの高さ */
+    left: -50px;
+    /* 円の幅の半分 */
+    top: -50px;
+    /* 円の高さの半分 */
+    width: 100px;
+    /* カーソルがリンク上に乗ったときの幅 */
+    filter: blur(25px);
+    /* ぼかしの強さ */
+}
+
+
+
+/* フェードイン */
+.fadeIn {
+    opacity: 0;
+    transition: 2.5s;
+}
+
+.fadeIn.is-show {
+    opacity: 1;
+}

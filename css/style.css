@@ -1,20 +1,6 @@
-@charset "utf-8";
-
-/* フェードイン */
-.fadeIn {
-    opacity: 0;
-    transition: 2.5s;
-}
-
-.fadeIn.is-show {
-    opacity: 1;
-}
-
 /* 背景 */
 body {
     position: relative;
-
-
 }
 
 .bg {

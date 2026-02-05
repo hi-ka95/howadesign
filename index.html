@@ -12,14 +12,13 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/footer.css">
 
     <!-- jQueryCDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-
 
     <!-- slick js CDN -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -33,6 +32,9 @@
 </head>
 
 <body>
+    <!-- マウスポインター -->
+    <div class="stalker" id="js-stalker"></div>
+
     <!-- 背景 -->
     <div class="bg">
         <video src="./images/bg 11.40.28.mp4" class="bg_video" autoplay loop muted playsinline
@@ -88,9 +90,9 @@
             <div class="sp_nav">
                 <div class="sp_nav_menu">
                     <ul>
-                        <li><a href="#ABOUT" class="hoverscale">ABOUT</a></li>
-                        <li><a href="#SERVICE" class="hoverscale">SERVICE</a></li>
-                        <li><a href="#WORKS" class="hoverscale">WORKS</a></li>
+                        <li><a href="./about.html" class="hoverscale">ABOUT</a></li>
+                        <li><a href="./service.html" class="hoverscale">SERVICE</a></li>
+                        <li><a href="./index.html#WORKS" class="hoverscale">WORKS</a></li>
                         <li><a href="#CONTACT" class="hoverscale">CONTACT</a></li>
                     </ul>
                     <p>ふわっとしたイメージ<br>
@@ -167,7 +169,7 @@
                     <p>各種図面をお送りください。CGでは表現できない、温かみのある手書き内装パースを作成します。</p>
                 </div>
             </div>
-            <a class="btn hoverscale" href="">SERVICE&PRICE</a>
+            <a class="btn hoverscale" href="./service.html">SERVICE&PRICE</a>
         </section>
 
         <div class="inview">
@@ -543,6 +545,27 @@
             }
         });
 
+        $(function () {
+            const stalker = $("#js-stalker");
+            $(document).on("mousemove", function (e) {
+                // マウスの座標を取得
+                const x = e.clientX;
+                const y = e.clientY;
+                // ストーカーの位置を更新
+                stalker.css({
+                    opacity: 1, // カーソルが画面内に入ったら不透明にする
+                    transform: "translate(" + x + "px, " + y + "px)", // マウスの座標に移動
+                });
+            });
+            $("a").on({
+                mouseenter: function () {
+                    stalker.addClass("js-hover"); // リンクにカーソルが乗ったときに拡大するクラスを追加
+                },
+                mouseleave: function () {
+                    stalker.removeClass("js-hover"); // リンクからカーソルが離れたときに拡大するクラスを削除
+                },
+            });
+        }); 
     </script>
 
 </body>

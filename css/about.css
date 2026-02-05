@@ -58,7 +58,7 @@ body {
 }
 
 .pc_nav ul li {
-    width: 112px;
+    width: 125px;
     font-family: "futura-100-book", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -75,8 +75,9 @@ body {
 }
 
 .handwriting {
-    width: 100%;
+    width: 23%;
     height: auto;
+    padding-bottom: 66px;
 }
 
 .handwriting_text {
@@ -87,11 +88,12 @@ body {
 .handwriting_mask_line {
     fill: none;
     stroke: #fff;
-    stroke-width: 25;
+    stroke-width: 21;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-dasharray: 4000px;
-    animation: handwriting 4s linear infinite;
+    stroke-dasharray: 2000px;
+    animation: handwriting 3s linear;
+    transform: translateX(-12px);
 }
 
 
