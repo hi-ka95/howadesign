@@ -18,7 +18,7 @@
     /* スクロールしてもカーソルの位置で固定 */
     top: -15px;
     /* widthの半分 */
-    transition: transform .3s ease-out;
+    transition: .3s ease-out;
     /* 遅れてついてくる時間 */
     width: 15px;
     /* 円の幅 */

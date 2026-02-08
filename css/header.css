@@ -203,3 +203,7 @@
 #fixed-header.is-show {
     top: 0;
 }
+
+#fixed-header.hidden {
+    display: none;
+}

@@ -32,7 +32,12 @@
 }
 
 .contents {
-    display: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.contents.is-show {
+    opacity: 1;
 }
 
 /* 背景 */

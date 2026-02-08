@@ -34,6 +34,7 @@
 <body>
     <!-- マウスポインター -->
     <div class="stalker" id="js-stalker"></div>
+    <!-- ローディング画面 -->
     <div class="loading">
         <div class="scroll_area">
             <svg class="loading_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.68 92.38">
@@ -105,7 +106,7 @@
             </div>
         </header>
         <!-- 固定ヘッダー -->
-        <div id="fixed-header">
+        <div id="fixed-header" class="hidden">
             <div class="header_wrap">
                 <h1 class="header_logo">
                     <a href="#header">
@@ -391,7 +392,7 @@
                 <div class="contact_container">
                     <h2>CONTACT</h2>
                     <p>平日9:00-17:00<br>平日17時以降にいただいたメールは<br>翌営業日に返信します</p>
-                    <a class="contact_btn hoverscale" href="#CONTACT">お問い合わせフォーム</a>
+                    <a class="contact_btn hoverscale" href="./contact.html">お問い合わせフォーム</a>
                 </div>
             </section>
 
@@ -460,11 +461,14 @@
     <script src="./jquery.inview.min.js"></script>
 
     <script>
+        // ローディング画面
         $(function () {
             $('html,body').animate({ scrollTop: 0 }, 1);
             var scroll;
             var sum;
+            let isLocked = true;
             $(window).scroll(function () {
+                if (!isLocked) return;
                 scroll = $(this).scrollTop();
                 sum = 1 + scroll / 50;
                 $(".circle").css({
@@ -473,10 +477,17 @@
                 if (sum >= 30) {
                     $(".loading").fadeOut()
                     setTimeout(() => {
-                        $(".contents").fadeIn()
+                        $('html,body').scrollTop(0)
+                        isLocked = false;
+                        $(".contents").addClass('is-show')
+                        setTimeout(() => {
+                            $("#fixed-header").removeClass
+                                ('hidden')
+                        }, 500)
                     }, 500)
                 }
             })
+            // ハンバーガーメニュークリックしたら
             $('#header .sp_btn').on('click', function () {
                 $('#header .sp_btn').toggleClass('open');
                 $('#header .sp_nav').fadeToggle();
