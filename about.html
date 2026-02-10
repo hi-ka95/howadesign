@@ -455,6 +455,14 @@
                     stalker.removeClass("js-hover"); // リンクからカーソルが離れたときに拡大するクラスを削除
                 },
             });
+            $(".sp_btn").on({
+                mouseenter: function () {
+                    stalker.addClass("js-hover"); // リンクにカーソルが乗ったときに拡大するクラスを追加
+                },
+                mouseleave: function () {
+                    stalker.removeClass("js-hover"); // リンクからカーソルが離れたときに拡大するクラスを削除
+                },
+            });
         }); 
     </script>
 </body>
