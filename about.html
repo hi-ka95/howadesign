@@ -384,57 +384,59 @@
                     $(this).stop().addClass("is-show");
                 }
             });
-        });
 
-        $(".sp_btn").click(function () {
 
-            // 現在のbodyタグのoverflowスタイルを確認
-            if ($("body").css("overflow") === "hidden") {
+            $(".sp_btn").click(function () {
 
-                // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
-                $("body").css({ height: "", overflow: "" });
+                // 現在のbodyタグのoverflowスタイルを確認
+                if ($("body").css("overflow") === "hidden") {
 
-            } else {
+                    // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                    $("body").css({ height: "", overflow: "" });
 
-                // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
-                $("body").css({ height: "100%", overflow: "hidden" });
-
-            }
-        });
-
-        $(".inview_re").on("inview", function (event, isInView) {
-            if (isInView) {
-                $(this).stop().addClass("is-show");
-            } else {
-                $(this).stop().removeClass("is-show");
-            }
-        });
-
-        (function () {
-            const fh = document.getElementById('fixed-header');
-            const isUp = (function () {
-                const scrollElement = document.scrollingElement;
-                let flag, prePoint, scrollPoint;
-                return function () {
-                    scrollPoint = scrollElement.scrollTop;
-                    flag = prePoint > scrollPoint ? true : false;
-                    prePoint = scrollPoint;
-                    return flag;
-                }
-            }());
-
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 200) {
-                    if (isUp()) {
-                        fh.classList.remove('is-show');
-                    } else {
-                        fh.classList.add('is-show')
-                    }
                 } else {
-                    fh.classList.remove('is-show');
+
+                    // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+                    $("body").css({ height: "100%", overflow: "hidden" });
+
                 }
-            })
-        }());
+            });
+
+            $(".inview_re").on("inview", function (event, isInView) {
+                if (isInView) {
+                    $(this).stop().addClass("is-show");
+                } else {
+                    $(this).stop().removeClass("is-show");
+                }
+            });
+
+            (function () {
+                const fh = document.getElementById('fixed-header');
+                const isUp = (function () {
+                    const scrollElement = document.scrollingElement;
+                    let flag, prePoint, scrollPoint;
+                    return function () {
+                        scrollPoint = scrollElement.scrollTop;
+                        flag = prePoint > scrollPoint ? true : false;
+                        prePoint = scrollPoint;
+                        return flag;
+                    }
+                }());
+
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 200) {
+                        if (isUp()) {
+                            fh.classList.remove('is-show');
+                        } else {
+                            fh.classList.add('is-show')
+                        }
+                    } else {
+                        fh.classList.remove('is-show');
+                    }
+                })
+            }());
+        });
+
         $(function () {
             const stalker = $("#js-stalker");
             $(document).on("mousemove", function (e) {
@@ -466,3 +468,5 @@
         }); 
     </script>
 </body>
+
+</html>
