@@ -479,7 +479,7 @@
                     setTimeout(() => {
                         $('html,body').scrollTop(0)
                         isLocked = false;
-                        $(".contents").addClass('is-show')
+                        $(".contents").addClass('show')
                         setTimeout(() => {
                             $("#fixed-header").removeClass
                                 ('hidden')
@@ -563,6 +563,8 @@
             $(".inview").on("inview", function (event, isInView) {
                 if (isInView) {
                     $(this).stop().addClass("is-show");
+                } else {
+                    $(this).stop().removeClass("is-show");
                 }
             });
 
@@ -614,6 +616,22 @@
                 });
             });
             $("a").on({
+                mouseenter: function () {
+                    stalker.addClass("js-hover"); // リンクにカーソルが乗ったときに拡大するクラスを追加
+                },
+                mouseleave: function () {
+                    stalker.removeClass("js-hover"); // リンクからカーソルが離れたときに拡大するクラスを削除
+                },
+            });
+            $(".slide-arrow").on({
+                mouseenter: function () {
+                    stalker.addClass("js-hover"); // リンクにカーソルが乗ったときに拡大するクラスを追加
+                },
+                mouseleave: function () {
+                    stalker.removeClass("js-hover"); // リンクからカーソルが離れたときに拡大するクラスを削除
+                },
+            });
+            $(".sp_btn").on({
                 mouseenter: function () {
                     stalker.addClass("js-hover"); // リンクにカーソルが乗ったときに拡大するクラスを追加
                 },

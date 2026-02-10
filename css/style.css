@@ -36,7 +36,7 @@
     transition: 0.5s;
 }
 
-.contents.is-show {
+.contents.show {
     opacity: 1;
 }
 
