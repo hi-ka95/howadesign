@@ -24,7 +24,16 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- フォント -->
-    <link rel="stylesheet" href="https://use.typekit.net/kdj8amb.css">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'kdj8amb',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 
 
     <!-- jsDelivr cdn -->
@@ -37,6 +46,10 @@
     <!-- ローディング画面 -->
     <div class="loading">
         <div class="scroll_area">
+            <div class="bg">
+                <video src="./images/bg_graduation.mp4" class="bg_video" autoplay loop muted playsinline
+                    poster="./images/bg.jpg"></video>
+            </div>
             <svg class="loading_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.68 92.38">
                 <defs>
                     <style>
@@ -63,11 +76,10 @@
             </svg>
         </div>
     </div>
-
     <div class="contents">
         <!-- 背景 -->
         <div class="bg">
-            <video src="./images/bg 11.40.28.mp4" class="bg_video" autoplay loop muted playsinline
+            <video src="./images/bg_graduation.mp4" class="bg_video" autoplay loop muted playsinline
                 poster="./images/bg.jpg"></video>
         </div>
         <!-- ヘッダー -->
@@ -221,7 +233,7 @@
                 </div>
                 <div class="slider_web">
                     <div>
-                        <a href="">
+                        <a href="./works_portforio.html">
                             <img src="./images/web_1-80.jpg" alt="ポートフォリオサイト">
                             <div class="slider_title">
                                 <p>自主制作<br>ポートフォリオサイト</p>
@@ -275,8 +287,8 @@
                 </div>
                 <div class="slider_graphic">
                     <div>
-                        <a href="">
-                            <img src="./images/graphic_1.jpg" alt="A2ポスター2種">
+                        <a href="./works_A2poster.html">
+                            <img src="./images/poster_AB.jpg" alt="A2ポスター2種">
                             <div class="slider_title">
                                 <p>株式会社Met's様<br>新作振袖告知ポスター　2種</p>
                             </div>
@@ -474,30 +486,37 @@
     <script>
         // ローディング画面
         $(function () {
-            $('html,body').animate({ scrollTop: 0 }, 1);
-            var scroll;
-            var sum;
-            let isLocked = true;
-            $(window).scroll(function () {
-                if (!isLocked) return;
-                scroll = $(this).scrollTop();
-                sum = 1 + scroll / 50;
-                $(".circle").css({
-                    "transform": "scale(" + sum + ")"
-                })
-                if (sum >= 30) {
-                    $(".loading").fadeOut()
-                    setTimeout(() => {
-                        $('html,body').scrollTop(0)
-                        isLocked = false;
-                        $(".contents").addClass('show')
+            let hash = location.hash
+            if (hash) {
+                $(".loading").hide()
+                $(".contents").addClass('show')
+                $("#fixed-header").removeClass('hidden')
+            } else {
+                $('html,body').animate({ scrollTop: 0 }, 1);
+                var scroll;
+                var sum;
+                let isLocked = true;
+                $(window).scroll(function () {
+                    if (!isLocked) return;
+                    scroll = $(this).scrollTop();
+                    sum = 1 + scroll / 50;
+                    $(".circle").css({
+                        "transform": "scale(" + sum + ")"
+                    })
+                    if (sum >= 30) {
+                        $(".loading").fadeOut()
                         setTimeout(() => {
-                            $("#fixed-header").removeClass
-                                ('hidden')
+                            $('html,body').scrollTop(0)
+                            isLocked = false;
+                            $(".contents").addClass('show')
+                            setTimeout(() => {
+                                $("#fixed-header").removeClass
+                                    ('hidden')
+                            }, 500)
                         }, 500)
-                    }, 500)
-                }
-            })
+                    }
+                })
+            }
             // ハンバーガーメニュークリックしたら
             $('#header .sp_btn').on('click', function () {
                 $('#header .sp_btn').toggleClass('open');
@@ -507,7 +526,6 @@
                 $('#fixed-header .sp_btn').toggleClass('open');
                 $('#fixed-header .sp_nav').fadeToggle();
             })
-
             $(".sp_btn").click(function () {
 
                 // 現在のbodyタグのoverflowスタイルを確認
@@ -520,9 +538,14 @@
 
                     // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
                     $("body").css({ height: "100%", overflow: "hidden" });
-
                 }
             });
+            $('.sp_nav a').on('click', function () {
+                $('.sp_nav').fadeOut();
+                $("body").css({ height: "", overflow: "" });
+                $('.sp_btn').removeClass('open');
+            })
+
             $('.slider_web').slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2ポスター</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/works.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <!-- jQueryCDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- フォント -->
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'kdj8amb',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
+    <!-- jsDelivr cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+
+</head>
+
+<body>
+    <!-- マウスポインター -->
+    <div class="stalker" id="js-stalker"></div>
+    <!-- 背景 -->
+    <div class="bg">
+        <video src="./images/bg_graduation.mp4" class="bg_video" autoplay loop muted playsinline
+            poster="./images/bg.jpg"></video>
+    </div>
+    <!-- ヘッダー -->
+    <header id="header">
+        <div class="header_wrap">
+            <h1 class="header_logo">
+                <a href="#header">
+                    <img src="./images/header_logo.svg" alt="howa_design_logo" class="hoverscale">
+                </a>
+            </h1>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="./about.html" class="hoverscale">ABOUT</a></li>
+                    <li><a href="./service.html" class="hoverscale">SERVICE</a></li>
+                    <li><a href="./index.html#WORKS" class="hoverscale">WORKS</a></li>
+                    <li><a href="./contact.html" class="hoverscale">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn hoverscale">
+                <p>CLOSE</p>
+                <span></span>
+            </div>
+            <div class="sp_nav">
+                <div class="sp_nav_menu">
+                    <ul>
+                        <li><a href="./index.html" class="hoverscale">TOP</a></li>
+                        <li><a href="./about.html" class="hoverscale">ABOUT</a></li>
+                        <li><a href="./about.html" class="hoverscale">SERVICE</a></li>
+                        <li><a href="./index.html#WORKS" class="hoverscale">WORKS</a></li>
+                        <li><a href="./contact.html" class="hoverscale">CONTACT</a></li>
+                    </ul>
+                    <p>ふわっとしたイメージ<br>
+                        ほわっと形に。</p>
+                    <a class="contact_btn hoverscale" href="./contact.html">お問い合わせフォーム</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 固定ヘッダー -->
+    <div id="fixed-header" class="hidden">
+        <div class="header_wrap">
+            <h1 class="header_logo">
+                <a href="#header">
+                    <img src="./images/header_logo.svg" alt="howa_design_logo" class="hoverscale">
+                </a>
+            </h1>
+            <div class="sp_btn hoverscale">
+                <p>CLOSE</p>
+                <span></span>
+            </div>
+            <div class="sp_nav">
+                <div class="sp_nav_menu">
+                    <ul>
+                        <li><a href="./index.html" class="hoverscale">TOP</a></li>
+                        <li><a href="./about.html" class="hoverscale">ABOUT</a></li>
+                        <li><a href="./service.html" class="hoverscale">SERVICE</a></li>
+                        <li><a href="./index.html#WORKS" class="hoverscale">WORKS</a></li>
+                        <li><a href="./contact.html" class="hoverscale">CONTACT</a></li>
+                    </ul>
+                    <p>ふわっとしたイメージ<br>
+                        ほわっと形に。</p>
+                    <a class="contact_btn hoverscale" href="./contact.html">お問い合わせフォーム</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <h2>howa design</h2>
+        <h3>ポートフォリオサイト</h3>
+        <div class="main_visual">
+            <img src="./images/portforio_main.jpg" alt="howa design ポートフォリオサイト">
+        </div>
+        <div class="text_box">
+            <div class="text_box_inner">
+                <p class="category">クライアント</p>
+                <p class="text">自主制作</p>
+            </div>
+            <div class="text_box_inner">
+                <p class="category">制作範囲</p>
+                <p class="text">ページデザイン・コーディング</p>
+            </div>
+            <div class="text_box_inner">
+                <p class="category">概要</p>
+                <p class="text">自身のポートフォリオサイトです。<br>
+                    ポートフォリオを作成するにあたり、自身の屋号・ロゴもデザインしました。<br>
+                    お客様にとってどんなデザイナーでありたいかを深く考え、その想いをデザインに落とし込みました。<br>
+                    PC、タブレット、スマートフォン。どの媒体で見てもデザインが崩れないようにレスポンシブにも力を入れました。<br>
+                </p>
+            </div>
+        </div>
+        <div class="sub_visual">
+            <img class="left_img" src="./images/poster-left.jpg" alt="デザイン詳細">
+            <img class="right_img" src="./images/poster-right.jpg" alt="キャッチコピー部分">
+        </div>
+        <!-- <div class="end_visual">
+            <img src="" alt="">
+        </div> -->
+
+        <a class="btn hoverscale" href="./index.html#WORKS">WORKSへ戻る</a>
+
+
+    </main>
+    <footer id="footer">
+        <div class="pc_footer_wrap">
+            <a href="" class="hoverscale">
+                <img src="./images/instagram.svg" alt="インスタグラムロゴ">
+            </a>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="./about.html" class="hoverscale">ABOUT</a></li>
+                    <li><a href="./service.html" class="hoverscale">SERVICE</a></li>
+                    <li><a href="./index.html#WORKS" class="hoverscale">WORKS</a></li>
+                    <li><a href="./contact.html" class="hoverscale">CONTACT</a></li>
+                </ul>
+            </nav>
+            <p>© 2026 howa design.</p>
+        </div>
+
+        <div class="sp_footer_wrap">
+            <nav class="sp_footer_nav">
+                <ul>
+                    <li><a href="./about.html" class="hoverscale">ABOUT</a></li>
+                    <li><a href="./service.html" class="hoverscale">SERVICE</a></li>
+                    <li><a href="./index.html#WORKS" class="hoverscale">WORKS</a></li>
+                    <li><a href="./contact.html" class="hoverscale">CONTACT</a></li>
+                </ul>
+                <a href="" class="hoverscale">
+                    <img src="./images/instagram.svg" alt="インスタグラムロゴ">
+                </a>
+            </nav>
+            <div class="page_top">
+                <a href="#header" class="hoverscale">
+                    <img src="./images/return_top_btn.svg" alt="トップへ戻る">
+                </a>
+            </div>
+        </div>
+        <div class="sp_copyright">
+            <p>© 2026 howa design.</p>
+        </div>
+    </footer>
+
+
+    <!-- inview.js -->
+    <script src="./jquery.inview.min.js"></script>
+
+    <script>
+        // ハンバーガーメニュークリックしたら
+        $('#header .sp_btn').on('click', function () {
+            $('#header .sp_btn').toggleClass('open');
+            $('#header .sp_nav').fadeToggle();
+        })
+        $('#fixed-header .sp_btn').on('click', function () {
+            $('#fixed-header .sp_btn').toggleClass('open');
+            $('#fixed-header .sp_nav').fadeToggle();
+        })
+        $(".sp_btn").click(function () {
+
+            // 現在のbodyタグのoverflowスタイルを確認
+            if ($("body").css("overflow") === "hidden") {
+
+                // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+                $("body").css({ height: "", overflow: "" });
+
+            } else {
+
+                // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+                $("body").css({ height: "100%", overflow: "hidden" });
+            }
+        });
+        $('.sp_nav a').on('click', function () {
+            $('.sp_nav').fadeOut();
+            $("body").css({ height: "", overflow: "" });
+            $('.sp_btn').removeClass('open');
+        })
+
+        $(".inview").on("inview", function (event, isInView) {
+            if (isInView) {
+                $(this).stop().addClass("is-show");
+            } else {
+                $(this).stop().removeClass("is-show");
+            }
+        });
+
+        (function () {
+            const fh = document.getElementById('fixed-header');
+            const isUp = (function () {
+                const scrollElement = document.scrollingElement;
+                let flag, prePoint, scrollPoint;
+                return function () {
+                    scrollPoint = scrollElement.scrollTop;
+                    flag = prePoint > scrollPoint ? true : false;
+                    prePoint = scrollPoint;
+                    return flag;
+                }
+            }());
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 200) {
+                    if (isUp()) {
+                        fh.classList.remove('is-show');
+                    } else {
+                        fh.classList.add('is-show')
+                    }
+                } else {
+                    fh.classList.remove('is-show');
+                }
+            })
+        }());
+
+
+        $(".inview_re").on("inview", function (event, isInView) {
+            if (isInView) {
+                $(this).stop().addClass("is-show");
+            } else {
+                $(this).stop().removeClass("is-show");
+            }
+        });
+
+        $(function () {
+            const stalker = $("#js-stalker");
+            $(document).on("mousemove", function (e) {
+                // マウスの座標を取得
+                const x = e.clientX;
+                const y = e.clientY;
+                // ストーカーの位置を更新
+                stalker.css({
+                    opacity: 1, // カーソルが画面内に入ったら不透明にする
+                    transform: "translate(" + x + "px, " + y + "px)", // マウスの座標に移動
+                });
+            });
+            $("a").on({
+                mouseenter: function () {
+                    stalker.addClass("js-hover"); // リンクにカーソルが乗ったときに拡大するクラスを追加
+                },
+                mouseleave: function () {
+                    stalker.removeClass("js-hover"); // リンクからカーソルが離れたときに拡大するクラスを削除
+                },
+            });
+            $(".slide-arrow").on({
+                mouseenter: function () {
+                    stalker.addClass("js-hover"); // リンクにカーソルが乗ったときに拡大するクラスを追加
+                },
+                mouseleave: function () {
+                    stalker.removeClass("js-hover"); // リンクからカーソルが離れたときに拡大するクラスを削除
+                },
+            });
+            $(".sp_btn").on({
+                mouseenter: function () {
+                    stalker.addClass("js-hover"); // リンクにカーソルが乗ったときに拡大するクラスを追加
+                },
+                mouseleave: function () {
+                    stalker.removeClass("js-hover"); // リンクからカーソルが離れたときに拡大するクラスを削除
+                },
+            });
+        }); 
+    </script>
+
+
+</body>
+
+</html>
