@@ -406,6 +406,9 @@ h2 {
     /* 最終的な長さ */
 }
 
+
+
+
 /* CONTACTセクション */
 #sp_CONTACT {
     display: none;
@@ -550,6 +553,20 @@ h2 {
     font-size: 18px;
     letter-spacing: 0.1em;
     font-weight: 400;
+}
+
+.zoom-box {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.zoom-box img {
+    display: block;
+    transition-duration: .5s;
+}
+
+.zoom-box img:hover {
+    transform: scale(1.2);
 }
 
 /* ブレイクポイント1 */
