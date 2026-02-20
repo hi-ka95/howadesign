@@ -175,7 +175,7 @@ h2 {
 }
 
 .is-show.lamp_animation .lamp {
-    animation: fuwari 1.8s steps(8);
+    animation: fuwari 2.3s steps(8);
     animation-fill-mode: forwards;
 }
 
