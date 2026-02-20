@@ -116,7 +116,7 @@ body {
 }
 
 .category img {
-    width: 115px;
+    width: 280px;
     display: block;
     margin: 0 auto;
     padding-bottom: 56px;
@@ -299,7 +299,6 @@ body {
     }
 
     .category img {
-        width: 77px;
         display: block;
         margin: 0 auto;
         padding-bottom: 64px;
